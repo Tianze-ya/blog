@@ -4,26 +4,54 @@
   
     
     <entry>
-      <title></title>
-      <link href="/blog//kali/kali-config-02/"/>
-      <url>/blog//kali/kali-config-02/</url>
+      <title>配置Kali-01</title>
+      <link href="/blog//os/linux/kali/kali-config-01/"/>
+      <url>/blog//os/linux/kali/kali-config-01/</url>
       
-        <content type="html"><![CDATA[<h3 id="一、修改用户名及密码"><a href="#一、修改用户名及密码" class="headerlink" title="一、修改用户名及密码"></a>一、修改用户名及密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置root用户密码，随后注销当前用户，登录root用户</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改用户名</span></span><br><span class="line">usermod -l new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改组名</span></span><br><span class="line">groupmod -n new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更好家目录名</span></span><br><span class="line">mv /home/old_name /home/new_name</span><br><span class="line">usermod -d /home/new_name -m username</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改 passwd 文件中用户的家目录</span></span><br><span class="line">vim /etc/passwd</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改</span></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、登录"><a href="#一、登录" class="headerlink" title="一、登录"></a>一、登录</h3><p>默认用户：kali<br>默认密码：kali</p><h3 id="二、调整分辨率"><a href="#二、调整分辨率" class="headerlink" title="二、调整分辨率"></a>二、调整分辨率</h3><p>Applications -&gt; Settings -&gt; Display<br>设置完成后点击 Apply （应用）</p><h3 id="三、换源"><a href="#三、换源" class="headerlink" title="三、换源"></a>三、换源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改/etc/apt/sources.list 文件</span></span><br><span class="line">sudo sed -i &quot;s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g&quot; /etc/apt/sources.list</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新软件包</span></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><p><em>此处更换清华源</em></p><h3 id="四、汉化"><a href="#四、汉化" class="headerlink" title="四、汉化"></a>四、汉化</h3><p>1、设置中文</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure locales</span><br></pre></td></tr></table></figure><p>使用方向键移动到 zh_CN.UTF-8 UTF-8 空格键选中 回车<br>接着选中 zh_CN.UTF-8 回车确定<br>重启即可生效</p><p>2、安装中文输入法<br><em>此处安装 fcitx 输入法</em><br>参考：*<a href="https://blog.csdn.net/weixin_43550772/article/details/139817468">Kali 设置中文输入法 </a>*</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-pinyin</span><br></pre></td></tr></table></figure><p>将默认输入法改为 fcitx<br>打开 fcitx 配置，将拼音输入法移至第一位，按Ctrl+Space切换输入法</p>]]></content>
       
       
+      <categories>
+          
+          <category> os </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> kali </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
-      <link href="/blog//kali/kali-config-01/"/>
-      <url>/blog//kali/kali-config-01/</url>
+      <title>配置Kali-02</title>
+      <link href="/blog//os/linux/kali/kali-config-02/"/>
+      <url>/blog//os/linux/kali/kali-config-02/</url>
       
-        <content type="html"><![CDATA[<h3 id="一、登录"><a href="#一、登录" class="headerlink" title="一、登录"></a>一、登录</h3><p>默认用户：kali<br>默认密码：kali</p><h3 id="二、调整分辨率"><a href="#二、调整分辨率" class="headerlink" title="二、调整分辨率"></a>二、调整分辨率</h3><p>Applications -&gt; Settings -&gt; Display<br>设置完成后点击 Apply （应用）</p><h3 id="三、换源"><a href="#三、换源" class="headerlink" title="三、换源"></a>三、换源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改/etc/apt/sources.list 文件</span></span><br><span class="line">sudo sed -i &quot;s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g&quot; /etc/apt/sources.list</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新软件包</span></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><p><em>此处更换清华源</em></p><h3 id="四、汉化"><a href="#四、汉化" class="headerlink" title="四、汉化"></a>四、汉化</h3><p>1、设置中文</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure locales</span><br></pre></td></tr></table></figure><p>使用方向键移动到 zh_CN.UTF-8 UTF-8 空格键选中 回车<br>接着选中 zh_CN.UTF-8 回车确定<br>重启即可生效</p><p>2、安装中文输入法<br><em>此处安装 fcitx 输入法</em><br>参考：*<a href="https://blog.csdn.net/weixin_43550772/article/details/139817468">Kali 设置中文输入法 </a>*</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-pinyin</span><br></pre></td></tr></table></figure><p>将默认输入法改为 fcitx<br>打开 fcitx 配置，将拼音输入法移至第一位，按Ctrl+Space切换输入法</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、修改用户名及密码"><a href="#一、修改用户名及密码" class="headerlink" title="一、修改用户名及密码"></a>一、修改用户名及密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置root用户密码，随后注销当前用户，登录root用户</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改用户名</span></span><br><span class="line">usermod -l new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改组名</span></span><br><span class="line">groupmod -n new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更好家目录名</span></span><br><span class="line">mv /home/old_name /home/new_name</span><br><span class="line">usermod -d /home/new_name -m username</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改 passwd 文件中用户的家目录</span></span><br><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> os </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> kali </tag>
+            
+        </tags>
       
     </entry>
     
@@ -31,24 +59,24 @@
     
     <entry>
       <title>安装Kali</title>
-      <link href="/blog//kali/kali-install/"/>
-      <url>/blog//kali/kali-install/</url>
+      <link href="/blog//os/linux/kali/kali-install/"/>
+      <url>/blog//os/linux/kali/kali-install/</url>
       
         <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
       
       
       <categories>
           
-          <category> Linux </category>
+          <category> os </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> linux </tag>
+            
+            <tag> kali </tag>
             
         </tags>
       
@@ -58,10 +86,10 @@
     
     <entry>
       <title>W1R3S 1.0.1渗透测试</title>
-      <link href="/blog//network/text/W1R3S/W1R3S-1.0.1-InfiltrationText/"/>
-      <url>/blog//network/text/W1R3S/W1R3S-1.0.1-InfiltrationText/</url>
+      <link href="/blog//network/W1R3S-1.0.1-InfiltrationText/"/>
+      <url>/blog//network/W1R3S-1.0.1-InfiltrationText/</url>
       
-        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视频 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a></p><p>![[W1R3S.out1.png]]</p><p>![[W1R3S.out2.png]]![[W1R3S.out3.png]]<br>![[W1R3S.out4.png]]<br>![[W1R3S.out5.png]]</p>]]></content>
+        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视频 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a><br><img src="/blog/img/note/network/W1R3S/W1R3S.out1.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out2.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out3.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out4.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out5.png"></p>]]></content>
       
       
       <categories>
@@ -73,9 +101,9 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> 渗透 </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -85,22 +113,22 @@
     
     <entry>
       <title>Tmux</title>
-      <link href="/blog//terminal/tmux/"/>
-      <url>/blog//terminal/tmux/</url>
+      <link href="/blog//os/linux/tools/tmux/"/>
+      <url>/blog//os/linux/tools/tmux/</url>
       
         <content type="html"><![CDATA[<h1 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h1><p>About tmux</p><ul><li>终端复用</li><li>多任务管理</li></ul><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt instll tmux</span><br></pre></td></tr></table></figure><h3 id="2-快捷键"><a href="#2-快捷键" class="headerlink" title="2. 快捷键"></a>2. 快捷键</h3><p>*完整快捷键查询 <a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet</a></p>]]></content>
       
       
       <categories>
           
-          <category> 终端 </category>
+          <category> os </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> kali </tag>
+            <tag> linux </tag>
             
             <tag> 工具 </tag>
             
@@ -112,10 +140,10 @@
     
     <entry>
       <title>Nmap</title>
-      <link href="/blog//network/nmap/nmap/"/>
-      <url>/blog//network/nmap/nmap/</url>
+      <link href="/blog//network/tools/nmap/"/>
+      <url>/blog//network/tools/nmap/</url>
       
-        <content type="html"><![CDATA[<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><p><strong>简介 nmap是一款非常强大的主机发现和端口扫描工具</strong><br>注 以172.16.200.131为目标机器</p><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><h3 id="主机查找"><a href="#主机查找" class="headerlink" title="主机查找"></a>主机查找</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sn 172.16.200.0/24</span><br></pre></td></tr></table></figure><p><img src="/blog/img/network/nmap/nmap.out1.png"></p><ul><li>-sn 指定IP地址</li><li>0&#x2F;24 表示0~256的所有可能<br><strong>该命令用于查找IP地址范围内活跃的IP 即主机查找</strong></li></ul><h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/network/nmap/nmap.out2.png"></p><ul><li>–min-rate 即最小查找时间 需按情况调整 10000适用于大部分场景</li><li>-p- 指定IP地址 后面的-为查找所有端口<br>一般需要扫描两次 此处不做演示</li></ul><h5 id="二次扫描"><a href="#二次扫描" class="headerlink" title="二次扫描"></a><strong>二次扫描</strong></h5><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sU --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/network/nmap/nmap.out3.png"></p><ul><li>-sU 指定扫描UDP<br>此处防止遗漏分别扫描TCP和UDP 获得全部端口</li></ul><h3 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sT -sV -O -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/network/nmap/nmap.out4.png"></p><ul><li>-sT  指定TCP 因为很多端口会同时有TCP和UDP 所以这里把UDP也写上</li><li>-sV 查看版本</li><li>-O  查看系统类型</li><li>-p 后接端口号 用 “,” 隔开</li></ul><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --script=vuln -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><ul><li>–script 指定扫描脚本</li></ul><p>该命令会扫描可行漏洞</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><p><strong>简介 nmap是一款非常强大的主机发现和端口扫描工具</strong><br>注 以172.16.200.131为目标机器</p><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><h3 id="主机查找"><a href="#主机查找" class="headerlink" title="主机查找"></a>主机查找</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sn 172.16.200.0/24</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out1.png"></p><ul><li>-sn 指定IP地址</li><li>0&#x2F;24 表示0~256的所有可能<br><strong>该命令用于查找IP地址范围内活跃的IP 即主机查找</strong></li></ul><h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out2.png"></p><ul><li>–min-rate 即最小查找时间 需按情况调整 10000适用于大部分场景</li><li>-p- 指定IP地址 后面的-为查找所有端口<br>一般需要扫描两次 此处不做演示</li></ul><h5 id="二次扫描"><a href="#二次扫描" class="headerlink" title="二次扫描"></a><strong>二次扫描</strong></h5><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sU --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out3.png"></p><ul><li>-sU 指定扫描UDP<br>此处防止遗漏分别扫描TCP和UDP 获得全部端口</li></ul><h3 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sT -sV -O -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out4.png"></p><ul><li>-sT  指定TCP 因为很多端口会同时有TCP和UDP 所以这里把UDP也写上</li><li>-sV 查看版本</li><li>-O  查看系统类型</li><li>-p 后接端口号 用 “,” 隔开</li></ul><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --script=vuln -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><ul><li>–script 指定扫描脚本</li></ul><p>该命令会扫描可行漏洞</p>]]></content>
       
       
       <categories>
@@ -127,7 +155,11 @@
       
         <tags>
             
-            <tag> kali </tag>
+            <tag> 渗透 </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> 工具 </tag>
             
         </tags>
       
@@ -137,15 +169,15 @@
     
     <entry>
       <title>PyQt6</title>
-      <link href="/blog//python/PyQt6/"/>
-      <url>/blog//python/PyQt6/</url>
+      <link href="/blog//python/pyqt6/"/>
+      <url>/blog//python/pyqt6/</url>
       
         <content type="html"><![CDATA[<h1 id="Python-GUI"><a href="#Python-GUI" class="headerlink" title="Python GUI"></a>Python GUI</h1><ul><li>好看 简洁</li><li>高效</li></ul>]]></content>
       
       
       <categories>
           
-          <category> Python </category>
+          <category> python </category>
           
       </categories>
       
@@ -165,19 +197,19 @@
       <link href="/blog//python/auto_run/"/>
       <url>/blog//python/auto_run/</url>
       
-        <content type="html"><![CDATA[<h2 id="Auto-Run"><a href="#Auto-Run" class="headerlink" title="Auto Run"></a>Auto Run</h2><p>代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">auto_run</span>(<span class="params">switch:<span class="built_in">bool</span>=<span class="literal">True</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">    BaseName = os.path.basename(sys.argv[<span class="number">0</span>]) <span class="comment">#获取程序名</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ctypes.windll.shell32.IsUserAnAdmin():</span><br><span class="line">                ctypes.windll.shell32.ShellExecuteW(<span class="literal">None</span>, <span class="string">&quot;runas&quot;</span>, sys.executable, BaseName, <span class="literal">None</span>, <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span><span class="comment">#是否管理员权限</span></span><br><span class="line"></span><br><span class="line">    location = <span class="string">fr&quot;SOFTWARE\Microsoft\Windows\CurrentVersion\Run&quot;</span> <span class="comment">#注册表位置</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#判断是否已经自启</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">is_auto_run</span>() -&gt;<span class="built_in">bool</span>:</span><br><span class="line">        <span class="comment"># 获取注册表该位置的所有键值</span></span><br><span class="line">        key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, location)</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="comment"># 获取注册表对应位置的键和值</span></span><br><span class="line">                <span class="keyword">if</span> winreg.EnumValue(key, i)[<span class="number">0</span>] == BaseName:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">except</span> OSError: <span class="comment">#直到值遍历完</span></span><br><span class="line">                winreg.CloseKey(key) <span class="comment">#关闭注册表</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置自启</span></span><br><span class="line">    Is_auto_run = is_auto_run()</span><br><span class="line">    <span class="keyword">if</span> switch:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> Is_auto_run:</span><br><span class="line">            sys.setrecursionlimit(<span class="number">1000000</span>) <span class="comment">#设置递归深度，防止Timeover</span></span><br><span class="line">            commnd = os.path.join(os.getcwd(),BaseName) <span class="comment">#启动软件的命令</span></span><br><span class="line">            name = BaseName</span><br><span class="line">            </span><br><span class="line">            key = win32api.RegOpenKey(win32con.HKEY_CURRENT_USER, location, <span class="number">0</span>, win32con.KEY_ALL_ACCESS) <span class="comment">#打开注册表</span></span><br><span class="line">            </span><br><span class="line">            win32api.RegSetValueEx(key, name, <span class="number">0</span>, win32con.REG_SZ, commnd)<span class="comment">#设值</span></span><br><span class="line">            win32api.RegCloseKey(key) <span class="comment">#关闭注册表</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> Is_auto_run:</span><br><span class="line">            </span><br><span class="line">            key = win32api.RegOpenKey(win32con.HKEY_CURRENT_USER, location, <span class="number">0</span>, win32con.KEY_ALL_ACCESS)<span class="comment">#打开注册表</span></span><br><span class="line">            </span><br><span class="line">            win32api.RegDeleteValue(key, BaseName)<span class="comment">#删除注册表</span></span><br><span class="line">            win32api.RegCloseKey(key) <span class="comment">#关闭注册表</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="库"><a href="#库" class="headerlink" title="库:"></a>库:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> winreg</span><br><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> win32api</span><br><span class="line"><span class="keyword">import</span> win32con</span><br></pre></td></tr></table></figure><ul><li>仅支持windows系统，需要管理员权限</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="Auto-Run"><a href="#Auto-Run" class="headerlink" title="Auto Run"></a>Auto Run</h2><p>代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> winreg</span><br><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> win32api</span><br><span class="line"><span class="keyword">import</span> win32con</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auto_run</span>(<span class="params">switch:<span class="built_in">bool</span>=<span class="literal">True</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">    BaseName = os.path.basename(sys.argv[<span class="number">0</span>]) <span class="comment">#获取程序名</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ctypes.windll.shell32.IsUserAnAdmin():</span><br><span class="line">                ctypes.windll.shell32.ShellExecuteW(<span class="literal">None</span>, <span class="string">&quot;runas&quot;</span>, sys.executable, BaseName, <span class="literal">None</span>, <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span><span class="comment">#是否管理员权限</span></span><br><span class="line"></span><br><span class="line">    location = <span class="string">fr&quot;SOFTWARE\Microsoft\Windows\CurrentVersion\Run&quot;</span> <span class="comment">#注册表位置</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#判断是否已经自启</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">is_auto_run</span>() -&gt;<span class="built_in">bool</span>:</span><br><span class="line">        <span class="comment"># 获取注册表该位置的所有键值</span></span><br><span class="line">        key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, location)</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="comment"># 获取注册表对应位置的键和值</span></span><br><span class="line">                <span class="keyword">if</span> winreg.EnumValue(key, i)[<span class="number">0</span>] == BaseName:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">except</span> OSError: <span class="comment">#直到值遍历完</span></span><br><span class="line">                winreg.CloseKey(key) <span class="comment">#关闭注册表</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置自启</span></span><br><span class="line">    Is_auto_run = is_auto_run()</span><br><span class="line">    <span class="keyword">if</span> switch:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> Is_auto_run:</span><br><span class="line">            sys.setrecursionlimit(<span class="number">1000000</span>) <span class="comment">#设置递归深度，防止Timeover</span></span><br><span class="line">            commnd = os.path.join(os.getcwd(),BaseName) <span class="comment">#启动软件的命令</span></span><br><span class="line">            name = BaseName</span><br><span class="line">            </span><br><span class="line">            key = win32api.RegOpenKey(win32con.HKEY_CURRENT_USER, location, <span class="number">0</span>, win32con.KEY_ALL_ACCESS) <span class="comment">#打开注册表</span></span><br><span class="line">            </span><br><span class="line">            win32api.RegSetValueEx(key, name, <span class="number">0</span>, win32con.REG_SZ, commnd)<span class="comment">#设值</span></span><br><span class="line">            win32api.RegCloseKey(key) <span class="comment">#关闭注册表</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> Is_auto_run:</span><br><span class="line">            </span><br><span class="line">            key = win32api.RegOpenKey(win32con.HKEY_CURRENT_USER, location, <span class="number">0</span>, win32con.KEY_ALL_ACCESS)<span class="comment">#打开注册表</span></span><br><span class="line">            </span><br><span class="line">            win32api.RegDeleteValue(key, BaseName)<span class="comment">#删除注册表</span></span><br><span class="line">            win32api.RegCloseKey(key) <span class="comment">#关闭注册表</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="库"><a href="#库" class="headerlink" title="库:"></a>库:</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pywin32</span><br></pre></td></tr></table></figure><ul><li>仅支持windows系统，需要管理员权限</li></ul>]]></content>
       
       
       <categories>
           
-          <category> Python </category>
+          <category> python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 工具 </tag>
+            <tag> 模板 </tag>
             
         </tags>
       
