@@ -5,19 +5,6 @@
     
     <entry>
       <title></title>
-      <link href="/blog//kali/kali-install/"/>
-      <url>/blog//kali/kali-install/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/blog//kali/kali-config-02/"/>
       <url>/blog//kali/kali-config-02/</url>
       
@@ -43,11 +30,38 @@
     
     
     <entry>
+      <title>安装Kali</title>
+      <link href="/blog//kali/kali-install/"/>
+      <url>/blog//kali/kali-install/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kali </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>W1R3S 1.0.1渗透测试</title>
       <link href="/blog//network/text/W1R3S/W1R3S-1.0.1-InfiltrationText/"/>
       <url>/blog//network/text/W1R3S/W1R3S-1.0.1-InfiltrationText/</url>
       
-        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视屏 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a></p><p>![[W1R3S.out1.png]]</p><p>![[W1R3S.out2.png]]![[W1R3S.out3.png]]<br>![[W1R3S.out4.png]]<br>![[W1R3S.out5.png]]</p>]]></content>
+        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视频 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a></p><p>![[W1R3S.out1.png]]</p><p>![[W1R3S.out2.png]]![[W1R3S.out3.png]]<br>![[W1R3S.out4.png]]<br>![[W1R3S.out5.png]]</p>]]></content>
       
       
       <categories>
@@ -74,7 +88,7 @@
       <link href="/blog//terminal/tmux/"/>
       <url>/blog//terminal/tmux/</url>
       
-        <content type="html"><![CDATA[<h1 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h1><p>About tmux</p><ul><li>终端复用</li><li>多任务管理</li></ul><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt instll tmux</span><br></pre></td></tr></table></figure><h3 id="2-快捷键"><a href="#2-快捷键" class="headerlink" title="2. 快捷键"></a>2. 快捷键</h3><p>*b 完整快捷键查询 <a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h1><p>About tmux</p><ul><li>终端复用</li><li>多任务管理</li></ul><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt instll tmux</span><br></pre></td></tr></table></figure><h3 id="2-快捷键"><a href="#2-快捷键" class="headerlink" title="2. 快捷键"></a>2. 快捷键</h3><p>*完整快捷键查询 <a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet</a></p>]]></content>
       
       
       <categories>
@@ -86,9 +100,9 @@
       
         <tags>
             
-            <tag> 工具 </tag>
-            
             <tag> kali </tag>
+            
+            <tag> 工具 </tag>
             
         </tags>
       
@@ -175,9 +189,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/blog/about/index.html"/>
-      <url>/blog/about/index.html</url>
+      <title>分类</title>
+      <link href="/blog/categories/index.html"/>
+      <url>/blog/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -186,9 +200,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/blog/categories/index.html"/>
-      <url>/blog/categories/index.html</url>
+      <title>关于</title>
+      <link href="/blog/about/index.html"/>
+      <url>/blog/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
