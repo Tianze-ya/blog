@@ -4,27 +4,39 @@
   
     
     <entry>
-      <title>W1RR3S 1.0.1渗透测试</title>
-      <link href="/blog//network/text/WR3S-1.0.1-InfiltrationText/"/>
-      <url>/blog//network/text/WR3S-1.0.1-InfiltrationText/</url>
+      <title></title>
+      <link href="/blog//kali/kali-install/"/>
+      <url>/blog//kali/kali-install/</url>
       
-        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视屏 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 网络 </category>
-          
-      </categories>
+        <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
       
       
-        <tags>
-            
-            <tag> kali </tag>
-            
-            <tag> 渗透 </tag>
-            
-        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/blog//kali/kali-config-02/"/>
+      <url>/blog//kali/kali-config-02/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、修改用户名及密码"><a href="#一、修改用户名及密码" class="headerlink" title="一、修改用户名及密码"></a>一、修改用户名及密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置root用户密码，随后注销当前用户，登录root用户</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改用户名</span></span><br><span class="line">usermod -l new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改组名</span></span><br><span class="line">groupmod -n new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更好家目录名</span></span><br><span class="line">mv /home/old_name /home/new_name</span><br><span class="line">usermod -d /home/new_name -m username</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改 passwd 文件中用户的家目录</span></span><br><span class="line">vim /etc/passwd</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/blog//kali/kali-config-01/"/>
+      <url>/blog//kali/kali-config-01/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、登录"><a href="#一、登录" class="headerlink" title="一、登录"></a>一、登录</h3><p>默认用户：kali<br>默认密码：kali</p><h3 id="二、调整分辨率"><a href="#二、调整分辨率" class="headerlink" title="二、调整分辨率"></a>二、调整分辨率</h3><p>Applications -&gt; Settings -&gt; Display<br>设置完成后点击 Apply （应用）</p><h3 id="三、换源"><a href="#三、换源" class="headerlink" title="三、换源"></a>三、换源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改/etc/apt/sources.list 文件</span></span><br><span class="line">sudo sed -i &quot;s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g&quot; /etc/apt/sources.list</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新软件包</span></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><p><em>此处更换清华源</em></p><h3 id="四、汉化"><a href="#四、汉化" class="headerlink" title="四、汉化"></a>四、汉化</h3><p>1、设置中文</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure locales</span><br></pre></td></tr></table></figure><p>使用方向键移动到 zh_CN.UTF-8 UTF-8 空格键选中 回车<br>接着选中 zh_CN.UTF-8 回车确定<br>重启即可生效</p><p>2、安装中文输入法<br><em>此处安装 fcitx 输入法</em><br>参考：*<a href="https://blog.csdn.net/weixin_43550772/article/details/139817468">Kali 设置中文输入法 </a>*</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-pinyin</span><br></pre></td></tr></table></figure><p>将默认输入法改为 fcitx<br>打开 fcitx 配置，将拼音输入法移至第一位，按Ctrl+Space切换输入法</p>]]></content>
+      
+      
       
     </entry>
     
@@ -74,32 +86,7 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> 工具 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Nmap</title>
-      <link href="/blog//network/nmap/"/>
-      <url>/blog//network/nmap/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><p><strong>简介 nmap是一款非常强大的主机发现和端口扫描工具</strong></p><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><h3 id="主机查找"><a href="#主机查找" class="headerlink" title="主机查找"></a>主机查找</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sn 172.16.200.0/24</span><br></pre></td></tr></table></figure><ul><li>-sn 指定IP地址</li><li>0&#x2F;24 表示0~256的所有可能<br><strong>该命令用于查找IP地址范围内活跃的IP 即主机查找</strong></li></ul><h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><ul><li>–min-rate 即最小查找时间 需按情况调整 10000适用于大部分场景</li><li>-p- 指定IP地址 后面的-为查找所有端口</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 网络 </category>
-          
-      </categories>
-      
-      
-        <tags>
             
             <tag> kali </tag>
             
@@ -179,25 +166,6 @@
             <tag> 工具 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/blog//%E6%95%99%E7%A8%8B/hello-world/"/>
-      <url>/blog//%E6%95%99%E7%A8%8B/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
       
     </entry>
     
