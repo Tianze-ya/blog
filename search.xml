@@ -31,11 +31,11 @@
     
     
     <entry>
-      <title>配置Kali-02</title>
-      <link href="/blog//os/linux/kali/kali-config-02/"/>
-      <url>/blog//os/linux/kali/kali-config-02/</url>
+      <title>安装Kali</title>
+      <link href="/blog//os/linux/kali/kali-install/"/>
+      <url>/blog//os/linux/kali/kali-install/</url>
       
-        <content type="html"><![CDATA[<h3 id="一、修改用户名及密码"><a href="#一、修改用户名及密码" class="headerlink" title="一、修改用户名及密码"></a>一、修改用户名及密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置root用户密码，随后注销当前用户，登录root用户</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改用户名</span></span><br><span class="line">usermod -l new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改组名</span></span><br><span class="line">groupmod -n new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更好家目录名</span></span><br><span class="line">mv /home/old_name /home/new_name</span><br><span class="line">usermod -d /home/new_name -m username</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改 passwd 文件中用户的家目录</span></span><br><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
       
       
       <categories>
@@ -58,11 +58,11 @@
     
     
     <entry>
-      <title>安装Kali</title>
-      <link href="/blog//os/linux/kali/kali-install/"/>
-      <url>/blog//os/linux/kali/kali-install/</url>
+      <title>配置Kali-02</title>
+      <link href="/blog//os/linux/kali/kali-config-02/"/>
+      <url>/blog//os/linux/kali/kali-config-02/</url>
       
-        <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、修改用户名及密码"><a href="#一、修改用户名及密码" class="headerlink" title="一、修改用户名及密码"></a>一、修改用户名及密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置root用户密码，随后注销当前用户，登录root用户</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改用户名</span></span><br><span class="line">usermod -l new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改组名</span></span><br><span class="line">groupmod -n new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更好家目录名</span></span><br><span class="line">mv /home/old_name /home/new_name</span><br><span class="line">usermod -d /home/new_name -m username</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改 passwd 文件中用户的家目录</span></span><br><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -101,9 +101,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> 渗透 </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -128,9 +128,9 @@
       
         <tags>
             
-            <tag> 工具 </tag>
-            
             <tag> linux </tag>
+            
+            <tag> 工具 </tag>
             
         </tags>
       
@@ -155,11 +155,11 @@
       
         <tags>
             
-            <tag> 工具 </tag>
+            <tag> 渗透 </tag>
             
             <tag> linux </tag>
             
-            <tag> 渗透 </tag>
+            <tag> 工具 </tag>
             
         </tags>
       
