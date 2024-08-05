@@ -13,6 +13,7 @@ tags:
 **`git 的出现高效的解决了团队开发中代码难同步的问题`**
 
 ## 二、下载
+
 **官网：[Git](https://git-scm.com/)**
 安装完成后输入以下命令来检查
 ```bash
@@ -21,8 +22,7 @@ git --version
 
 ## 三、配置
 
-###### 1、配置用户及邮箱信息
-
+1、配置用户及邮箱信息
 `username: Github 用户名`
 `email@email: Github 邮箱`
 ```bash
@@ -77,6 +77,7 @@ git push -u origin new_feature
 ```
 
 ## 五、常用命令
+
 **参照网站**
 * [Git 教程 | 菜鸟教程](https://www.runoob.com/git/git-tutorial.html)
 * [Git 使用教程-CSDN博客](https://blog.csdn.net/qq_16027093/article/details/130503317)
