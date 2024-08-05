@@ -4,25 +4,23 @@
   
     
     <entry>
-      <title>配置Kali-01</title>
-      <link href="/blog//os/linux/kali/kali-config-01/"/>
-      <url>/blog//os/linux/kali/kali-config-01/</url>
+      <title>Git 导航</title>
+      <link href="/blog//navigation/git/"/>
+      <url>/blog//navigation/git/</url>
       
-        <content type="html"><![CDATA[<h3 id="一、登录"><a href="#一、登录" class="headerlink" title="一、登录"></a>一、登录</h3><p>默认用户：kali<br>默认密码：kali</p><h3 id="二、调整分辨率"><a href="#二、调整分辨率" class="headerlink" title="二、调整分辨率"></a>二、调整分辨率</h3><p>Applications -&gt; Settings -&gt; Display<br>设置完成后点击 Apply （应用）</p><h3 id="三、换源"><a href="#三、换源" class="headerlink" title="三、换源"></a>三、换源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改/etc/apt/sources.list 文件</span></span><br><span class="line">sudo sed -i &quot;s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g&quot; /etc/apt/sources.list</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新软件包</span></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><p><em>此处更换清华源</em></p><h3 id="四、汉化"><a href="#四、汉化" class="headerlink" title="四、汉化"></a>四、汉化</h3><p>1、设置中文</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure locales</span><br></pre></td></tr></table></figure><p>使用方向键移动到 zh_CN.UTF-8 UTF-8 空格键选中 回车<br>接着选中 zh_CN.UTF-8 回车确定<br>重启即可生效</p><p>2、安装中文输入法<br><em>此处安装 fcitx 输入法</em><br>参考：*<a href="https://blog.csdn.net/weixin_43550772/article/details/139817468">Kali 设置中文输入法 </a>*</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-pinyin</span><br></pre></td></tr></table></figure><p>将默认输入法改为 fcitx<br>打开 fcitx 配置，将拼音输入法移至第一位，按Ctrl+Space切换输入法</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p> <em><strong>一款分布式版本控制系统软件</strong></em><br><strong>创始人就是我们伟大的Linux之父 林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds）</strong><br><strong><code>git 的出现高效的解决了团队开发中代码难同步的问题</code></strong></p><h2 id="二、下载"><a href="#二、下载" class="headerlink" title="二、下载"></a>二、下载</h2><p><strong>官网：<a href="https://git-scm.com/">Git</a></strong><br>安装完成后输入以下命令来检查</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><h2 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h2><h6 id="1、配置用户及邮箱信息"><a href="#1、配置用户及邮箱信息" class="headerlink" title="1、配置用户及邮箱信息"></a>1、配置用户及邮箱信息</h6><p><code>username: Github 用户名</code><br><code>email@email: Github 邮箱</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email email@email</span><br></pre></td></tr></table></figure><p>2、创建SSH密钥</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;email@email&quot;</span></span><br></pre></td></tr></table></figure><p><em>一路回车即可</em>  密钥被存储在 <strong>~&#x2F;.ssh&#x2F;id_rsa.pub</strong><br>打开<a href="https://github.com/">Github</a> Settings -&gt; Access -&gt; SSH and GPG keys -&gt; New SSH key<br><img src="/blog/img/note/navigation/git-01.png"></p><h5 id="将密钥中的文本填入key中，点击Add-SHH-key"><a href="#将密钥中的文本填入key中，点击Add-SHH-key" class="headerlink" title="将密钥中的文本填入key中，点击Add SHH key"></a>将密钥中的文本填入key中，点击Add SHH key</h5><p><img src="/blog/img/note/navigation/git-02.png"></p><h2 id="四、创建工作区"><a href="#四、创建工作区" class="headerlink" title="四、创建工作区"></a>四、创建工作区</h2><p>如果你创建了一个空仓库，想要把本地代码上传，使用一下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 绑定远程仓库</span></span><br><span class="line">git remote add origin repo_url</span><br><span class="line"><span class="comment"># 设置主分支</span></span><br><span class="line">git branch -M main</span><br><span class="line"><span class="comment"># 将文件加入缓存区</span></span><br><span class="line">git add filename</span><br><span class="line">git add . <span class="comment"># 添加所有更改的文件</span></span><br><span class="line"><span class="comment"># 提交代码至本地</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 推送至远程仓库</span></span><br><span class="line">git push -u origin main</span><br><span class="line"><span class="comment"># -u, --[no-]set-upstream -&gt; set upstream for git pull/status</span></span><br></pre></td></tr></table></figure><p>如果你正加入一个仓库，使用如下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆仓库</span></span><br><span class="line">git <span class="built_in">clone</span> repo_url</span><br><span class="line"><span class="comment"># 你可能想要切换至新的分支</span></span><br><span class="line">git checkout -b new_feature </span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> os </category>
+          <category> 导航 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
-            
-            <tag> kali </tag>
+            <tag> 工具 </tag>
             
         </tags>
       
@@ -32,8 +30,8 @@
     
     <entry>
       <title>配置Kali-02</title>
-      <link href="/blog//os/linux/kali/kali-config-02/"/>
-      <url>/blog//os/linux/kali/kali-config-02/</url>
+      <link href="/blog//system/linux/kali/kali-config-02/"/>
+      <url>/blog//system/linux/kali/kali-config-02/</url>
       
         <content type="html"><![CDATA[<h3 id="一、修改用户名及密码"><a href="#一、修改用户名及密码" class="headerlink" title="一、修改用户名及密码"></a>一、修改用户名及密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置root用户密码，随后注销当前用户，登录root用户</span></span><br><span class="line">sudo passwd root</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改用户名</span></span><br><span class="line">usermod -l new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改组名</span></span><br><span class="line">groupmod -n new_name old_name</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更好家目录名</span></span><br><span class="line">mv /home/old_name /home/new_name</span><br><span class="line">usermod -d /home/new_name -m username</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改 passwd 文件中用户的家目录</span></span><br><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure>]]></content>
       
@@ -59,10 +57,37 @@
     
     <entry>
       <title>安装Kali</title>
-      <link href="/blog//os/linux/kali/kali-install/"/>
-      <url>/blog//os/linux/kali/kali-install/</url>
+      <link href="/blog//system/linux/kali/kali-install/"/>
+      <url>/blog//system/linux/kali/kali-install/</url>
       
         <content type="html"><![CDATA[<h1 id="Install-Kali"><a href="#Install-Kali" class="headerlink" title="Install Kali"></a>Install Kali</h1><h4 id="一、-下载VMWare-WorkStation"><a href="#一、-下载VMWare-WorkStation" class="headerlink" title="一、 下载VMWare WorkStation"></a>一、 下载VMWare WorkStation</h4><p><a href="https://www.123pan.com/s/fKdKjv-TkWj.html">下载链接</a> 提取码:1234</p><h4 id="二、-下载kali"><a href="#二、-下载kali" class="headerlink" title="二、 下载kali"></a>二、 下载kali</h4><p><a href="https://www.kali.org/get-kali/#kali-virtual-machines">Get Kali | Kali Linux</a></p><h4 id="三、-将Kali导入VMWare"><a href="#三、-将Kali导入VMWare" class="headerlink" title="三、 将Kali导入VMWare"></a>三、 将Kali导入VMWare</h4><p>解压压缩包并导入至VMWare</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> os </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> kali </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>配置Kali-01</title>
+      <link href="/blog//system/linux/kali/kali-config-01/"/>
+      <url>/blog//system/linux/kali/kali-config-01/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、登录"><a href="#一、登录" class="headerlink" title="一、登录"></a>一、登录</h3><p>默认用户：kali<br>默认密码：kali</p><h3 id="二、调整分辨率"><a href="#二、调整分辨率" class="headerlink" title="二、调整分辨率"></a>二、调整分辨率</h3><p>Applications -&gt; Settings -&gt; Display<br>设置完成后点击 Apply （应用）</p><h3 id="三、换源"><a href="#三、换源" class="headerlink" title="三、换源"></a>三、换源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更改/etc/apt/sources.list 文件</span></span><br><span class="line">sudo sed -i &quot;s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g&quot; /etc/apt/sources.list</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新软件包</span></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><p><em>此处更换清华源</em></p><h3 id="四、汉化"><a href="#四、汉化" class="headerlink" title="四、汉化"></a>四、汉化</h3><p>1、设置中文</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure locales</span><br></pre></td></tr></table></figure><p>使用方向键移动到 zh_CN.UTF-8 UTF-8 空格键选中 回车<br>接着选中 zh_CN.UTF-8 回车确定<br>重启即可生效</p><p>2、安装中文输入法<br><em>此处安装 fcitx 输入法</em><br>参考：*<a href="https://blog.csdn.net/weixin_43550772/article/details/139817468">Kali 设置中文输入法 </a>*</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx fcitx-pinyin</span><br></pre></td></tr></table></figure><p>将默认输入法改为 fcitx<br>打开 fcitx 配置，将拼音输入法移至第一位，按Ctrl+Space切换输入法</p>]]></content>
       
       
       <categories>
@@ -89,7 +114,7 @@
       <link href="/blog//network/W1R3S-1.0.1-InfiltrationText/"/>
       <url>/blog//network/W1R3S-1.0.1-InfiltrationText/</url>
       
-        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视频 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a><br><img src="/blog/img/note/network/W1R3S/W1R3S.out1.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out2.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out3.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out4.png"><img src="/blog/img/note/network/W1R3S/W1R3S.out5.png"></p>]]></content>
+        <content type="html"><![CDATA[<p>靶机 <a href="https://www.vulnhub.com/entry/w1r3s-101,220/">W1R3S: 1.0.1 ~ VulnHub</a><br>参照视频 <a href="https://www.bilibili.com/video/BV1mB4y1j7K6/?spm_id_from=333.999.0.0&vd_source=5a4042a822de0be9a36ceb7b04176229">「红队笔记」靶机精讲：W1R3S 1.0.1</a><br><img src="/blog/img/note/network/W1R3S/W1R3S-01.png"><img src="/blog/img/note/network/W1R3S/W1R3S-02.png"><img src="/blog/img/note/network/W1R3S/W1R3S-03.png"><img src="/blog/img/note/network/W1R3S/W1R3S-04.png"><img src="/blog/img/note/network/W1R3S/W1R3S-05.png"></p>]]></content>
       
       
       <categories>
@@ -101,9 +126,9 @@
       
         <tags>
             
-            <tag> 渗透 </tag>
-            
             <tag> linux </tag>
+            
+            <tag> 渗透 </tag>
             
         </tags>
       
@@ -113,24 +138,24 @@
     
     <entry>
       <title>Tmux</title>
-      <link href="/blog//os/linux/tools/tmux/"/>
-      <url>/blog//os/linux/tools/tmux/</url>
+      <link href="/blog//navigation/tmux/"/>
+      <url>/blog//navigation/tmux/</url>
       
-        <content type="html"><![CDATA[<h1 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h1><p>About tmux</p><ul><li>终端复用</li><li>多任务管理</li></ul><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt instll tmux</span><br></pre></td></tr></table></figure><h3 id="2-快捷键"><a href="#2-快捷键" class="headerlink" title="2. 快捷键"></a>2. 快捷键</h3><p>*完整快捷键查询 <a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h1><p>About tmux</p><ul><li>终端复用</li><li>多任务管理</li></ul><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt instll tmux</span><br></pre></td></tr></table></figure><h3 id="2-快捷键"><a href="#2-快捷键" class="headerlink" title="2. 快捷键"></a>2. 快捷键</h3><p>*完整快捷键查询 <a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet</a></p>]]></content>
       
       
       <categories>
           
-          <category> os </category>
+          <category> 导航 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> 工具 </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -140,26 +165,26 @@
     
     <entry>
       <title>Nmap</title>
-      <link href="/blog//network/tools/nmap/"/>
-      <url>/blog//network/tools/nmap/</url>
+      <link href="/blog//navigation/nmap/"/>
+      <url>/blog//navigation/nmap/</url>
       
-        <content type="html"><![CDATA[<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><p><strong>简介 nmap是一款非常强大的主机发现和端口扫描工具</strong><br>注 以172.16.200.131为目标机器</p><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><h3 id="主机查找"><a href="#主机查找" class="headerlink" title="主机查找"></a>主机查找</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sn 172.16.200.0/24</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out1.png"></p><ul><li>-sn 指定IP地址</li><li>0&#x2F;24 表示0~256的所有可能<br><strong>该命令用于查找IP地址范围内活跃的IP 即主机查找</strong></li></ul><h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out2.png"></p><ul><li>–min-rate 即最小查找时间 需按情况调整 10000适用于大部分场景</li><li>-p- 指定IP地址 后面的-为查找所有端口<br>一般需要扫描两次 此处不做演示</li></ul><h5 id="二次扫描"><a href="#二次扫描" class="headerlink" title="二次扫描"></a><strong>二次扫描</strong></h5><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sU --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out3.png"></p><ul><li>-sU 指定扫描UDP<br>此处防止遗漏分别扫描TCP和UDP 获得全部端口</li></ul><h3 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sT -sV -O -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap.out4.png"></p><ul><li>-sT  指定TCP 因为很多端口会同时有TCP和UDP 所以这里把UDP也写上</li><li>-sV 查看版本</li><li>-O  查看系统类型</li><li>-p 后接端口号 用 “,” 隔开</li></ul><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --script=vuln -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><ul><li>–script 指定扫描脚本</li></ul><p>该命令会扫描可行漏洞</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h1><p><strong>简介 nmap是一款非常强大的主机发现和端口扫描工具</strong><br>注 以 IP: 172.16.200.131 为目标机器</p><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><h3 id="主机查找"><a href="#主机查找" class="headerlink" title="主机查找"></a>主机查找</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sn 172.16.200.0/24</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap-01.png"></p><ul><li>-sn 指定IP地址</li><li>0&#x2F;24 表示0~256的所有可能<br><strong>该命令用于查找IP地址范围内活跃的IP 即主机查找</strong></li></ul><h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap-02.png"></p><ul><li>–min-rate 即最小查找时间 需按情况调整 10000适用于大部分场景</li><li>-p- 指定IP地址 后面的-为查找所有端口<br>一般需要扫描两次 此处不做演示</li></ul><h5 id="二次扫描"><a href="#二次扫描" class="headerlink" title="二次扫描"></a><strong>二次扫描</strong></h5><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sU --min-rate 10000 -p- 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap-03.png"></p><ul><li>-sU 指定扫描UDP<br>此处防止遗漏分别扫描TCP和UDP 获得全部端口</li></ul><h3 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h3><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap -sT -sV -O -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><p><img src="/blog/img/note/network/nmap/nmap-04.png"></p><ul><li>-sT  指定TCP 因为很多端口会同时有TCP和UDP 所以这里把UDP也写上</li><li>-sV 查看版本</li><li>-O  查看系统类型</li><li>-p 后接端口号 用 “,” 隔开</li></ul><p><strong>输入事例</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nmap --script=vuln -p80,111,777,52497,5353,40444 172.16.200.131</span><br></pre></td></tr></table></figure><ul><li>–script 指定扫描脚本</li></ul><p>该命令会扫描可行漏洞</p>]]></content>
       
       
       <categories>
           
-          <category> 网络 </category>
+          <category> 导航 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 渗透 </tag>
+            <tag> 工具 </tag>
             
             <tag> linux </tag>
             
-            <tag> 工具 </tag>
+            <tag> 渗透 </tag>
             
         </tags>
       
@@ -232,6 +257,17 @@
     
     
     <entry>
+      <title></title>
+      <link href="/blog/css/custom.css"/>
+      <url>/blog/css/custom.css</url>
+      
+        <content type="html"><![CDATA[:root {    --trans-light: rgba(255, 255, 255, 0.88);    --trans-dark: rgba(25, 25, 25, 0.88);    --border-style: 1px solid rgb(169, 169, 169);    --backdrop-filter: blur(5px) saturate(150%);}/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}  /* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 翻页按钮居中 */#pagination {    width: 100%;    margin: auto;}/* 一级菜单居中 */#nav .menus_items {    position: absolute !important;    width: fit-content !important;    left: 50% !important;    transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {    display: flex !important;}/*这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 *//* .menus_items .menus_item:nth-child(2) .menus_item_child {    left: -125px;} *//* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(      -45deg,      #e8d8b9,      #eccec5,      #a3e9eb,      #bdbdf0,      #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;  }  @-webkit-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @-moz-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }    /* 黑夜模式适配 */  [data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;  }    /* 个人信息Follow me按钮 */  #aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;  }    /* 首页文章卡片 */  #recent-posts > .recent-post-item {    background: var(--trans-light);    backdrop-filter: var(--backdrop-filter);    border-radius: 25px;    border: var(--border-style);  }    /* 首页侧栏卡片 */  #aside-content .card-widget {    background: var(--trans-light);    backdrop-filter: var(--backdrop-filter);    border-radius: 18px;    border: var(--border-style);  }    /* 文章页、归档页、普通页面 */  div#post,  div#page,  div#archive {    background: var(--trans-light);    backdrop-filter: var(--backdrop-filter);    border: var(--border-style);    border-radius: 20px;  }    /* 导航栏 */  #page-header.nav-fixed #nav {    background: rgba(255, 255, 255, 0.75);    backdrop-filter: var(--backdrop-filter);  }    [data-theme="dark"] #page-header.nav-fixed #nav {    background: rgba(0, 0, 0, 0.7) !important;  }    /* 夜间模式遮罩 */  [data-theme="dark"] #recent-posts > .recent-post-item,  [data-theme="dark"] #aside-content .card-widget,  [data-theme="dark"] div#post,  [data-theme="dark"] div#archive,  [data-theme="dark"] div#page {    background: var(--trans-dark);  }      /* 夜间模式页脚页头遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }    /* 阅读模式 */  .read-mode #aside-content .card-widget {    background: rgba(158, 204, 171, 0.5) !important;  }  .read-mode div#post {    background: rgba(158, 204, 171, 0.5) !important;  }    /* 夜间模式下的阅读模式 */  [data-theme="dark"] .read-mode #aside-content .card-widget {    background: rgba(25, 25, 25, 0.9) !important;    color: #ffffff;  }  [data-theme="dark"] .read-mode div#post {    background: rgba(25, 25, 25, 0.9) !important;    color: #ffffff;  }/* 日间模式不生效 */[data-theme="light"] #site-name,[data-theme="light"] #site-title,[data-theme="light"] #site-subtitle,[data-theme="light"] #post-info {  animation: none;}/* 夜间模式生效 */[data-theme="dark"] #site-name,[data-theme="dark"] #site-title {  animation: light_15px 10s linear infinite;}[data-theme="dark"] #site-subtitle {  animation: light_10px 10s linear infinite;}[data-theme="dark"] #post-info {  animation: light_5px 10s linear infinite;}/* 关键帧描述 */@keyframes light_15px {  0% {    text-shadow: #5636ed 0 0 15px;  }  12.5% {    text-shadow: #11ee5e 0 0 15px;  }  25% {    text-shadow: #f14747 0 0 15px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 15px;  }  50% {    text-shadow: #b347f1 0 0 15px;  }  62.5% {    text-shadow: #002afa 0 0 15px;  }  75% {    text-shadow: #ed709b 0 0 15px;  }  87.5% {    text-shadow: #39c5bb 0 0 15px;  }  100% {    text-shadow: #5636ed 0 0 15px;  }}@keyframes light_10px {  0% {    text-shadow: #5636ed 0 0 10px;  }  12.5% {    text-shadow: #11ee5e 0 0 10px;  }  25% {    text-shadow: #f14747 0 0 10px;  }  37.5% {    text-shadow: #f1a247 0 0 10px;  }  50% {    text-shadow: #f1ee47 0 0 10px;  }  50% {    text-shadow: #b347f1 0 0 10px;  }  62.5% {    text-shadow: #002afa 0 0 10px;  }  75% {    text-shadow: #ed709b 0 0 10px;  }  87.5% {    text-shadow: #39c5bb 0 0 10px;  }  100% {    text-shadow: #5636ed 0 0 10px;  }}@keyframes light_5px {  0% {    text-shadow: #5636ed 0 0 5px;  }  12.5% {    text-shadow: #11ee5e 0 0 5px;  }  25% {    text-shadow: #f14747 0 0 5px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 5px;  }  50% {    text-shadow: #b347f1 0 0 5px;  }  62.5% {    text-shadow: #002afa 0 0 5px;  }  75% {    text-shadow: #ed709b 0 0 5px;  }  87.5% {    text-shadow: #39c5bb 0 0 5px;  }  100% {    text-shadow: #5636ed 0 0 5px;  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>分类</title>
       <link href="/blog/categories/index.html"/>
       <url>/blog/categories/index.html</url>
@@ -248,17 +284,6 @@
       <url>/blog/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/blog/css/custom.css"/>
-      <url>/blog/css/custom.css</url>
-      
-        <content type="html"><![CDATA[:root {    --trans-light: rgba(255, 255, 255, 0.88);    --trans-dark: rgba(25, 25, 25, 0.88);    --border-style: 1px solid rgb(169, 169, 169);    --backdrop-filter: blur(5px) saturate(150%);}/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}  /* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 翻页按钮居中 */#pagination {    width: 100%;    margin: auto;}/* 一级菜单居中 */#nav .menus_items {    position: absolute !important;    width: fit-content !important;    left: 50% !important;    transform: translateX(-50%) !important;}/* 子菜单横向展示 */#nav .menus_items .menus_item:hover .menus_item_child {    display: flex !important;}/*这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 *//* .menus_items .menus_item:nth-child(2) .menus_item_child {    left: -125px;} *//* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(      -45deg,      #e8d8b9,      #eccec5,      #a3e9eb,      #bdbdf0,      #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;  }  @-webkit-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @-moz-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }    /* 黑夜模式适配 */  [data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;  }    /* 个人信息Follow me按钮 */  #aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;  }    /* 首页文章卡片 */  #recent-posts > .recent-post-item {    background: var(--trans-light);    backdrop-filter: var(--backdrop-filter);    border-radius: 25px;    border: var(--border-style);  }    /* 首页侧栏卡片 */  #aside-content .card-widget {    background: var(--trans-light);    backdrop-filter: var(--backdrop-filter);    border-radius: 18px;    border: var(--border-style);  }    /* 文章页、归档页、普通页面 */  div#post,  div#page,  div#archive {    background: var(--trans-light);    backdrop-filter: var(--backdrop-filter);    border: var(--border-style);    border-radius: 20px;  }    /* 导航栏 */  #page-header.nav-fixed #nav {    background: rgba(255, 255, 255, 0.75);    backdrop-filter: var(--backdrop-filter);  }    [data-theme="dark"] #page-header.nav-fixed #nav {    background: rgba(0, 0, 0, 0.7) !important;  }    /* 夜间模式遮罩 */  [data-theme="dark"] #recent-posts > .recent-post-item,  [data-theme="dark"] #aside-content .card-widget,  [data-theme="dark"] div#post,  [data-theme="dark"] div#archive,  [data-theme="dark"] div#page {    background: var(--trans-dark);  }      /* 夜间模式页脚页头遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }    /* 阅读模式 */  .read-mode #aside-content .card-widget {    background: rgba(158, 204, 171, 0.5) !important;  }  .read-mode div#post {    background: rgba(158, 204, 171, 0.5) !important;  }    /* 夜间模式下的阅读模式 */  [data-theme="dark"] .read-mode #aside-content .card-widget {    background: rgba(25, 25, 25, 0.9) !important;    color: #ffffff;  }  [data-theme="dark"] .read-mode div#post {    background: rgba(25, 25, 25, 0.9) !important;    color: #ffffff;  }/* 日间模式不生效 */[data-theme="light"] #site-name,[data-theme="light"] #site-title,[data-theme="light"] #site-subtitle,[data-theme="light"] #post-info {  animation: none;}/* 夜间模式生效 */[data-theme="dark"] #site-name,[data-theme="dark"] #site-title {  animation: light_15px 10s linear infinite;}[data-theme="dark"] #site-subtitle {  animation: light_10px 10s linear infinite;}[data-theme="dark"] #post-info {  animation: light_5px 10s linear infinite;}/* 关键帧描述 */@keyframes light_15px {  0% {    text-shadow: #5636ed 0 0 15px;  }  12.5% {    text-shadow: #11ee5e 0 0 15px;  }  25% {    text-shadow: #f14747 0 0 15px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 15px;  }  50% {    text-shadow: #b347f1 0 0 15px;  }  62.5% {    text-shadow: #002afa 0 0 15px;  }  75% {    text-shadow: #ed709b 0 0 15px;  }  87.5% {    text-shadow: #39c5bb 0 0 15px;  }  100% {    text-shadow: #5636ed 0 0 15px;  }}@keyframes light_10px {  0% {    text-shadow: #5636ed 0 0 10px;  }  12.5% {    text-shadow: #11ee5e 0 0 10px;  }  25% {    text-shadow: #f14747 0 0 10px;  }  37.5% {    text-shadow: #f1a247 0 0 10px;  }  50% {    text-shadow: #f1ee47 0 0 10px;  }  50% {    text-shadow: #b347f1 0 0 10px;  }  62.5% {    text-shadow: #002afa 0 0 10px;  }  75% {    text-shadow: #ed709b 0 0 10px;  }  87.5% {    text-shadow: #39c5bb 0 0 10px;  }  100% {    text-shadow: #5636ed 0 0 10px;  }}@keyframes light_5px {  0% {    text-shadow: #5636ed 0 0 5px;  }  12.5% {    text-shadow: #11ee5e 0 0 5px;  }  25% {    text-shadow: #f14747 0 0 5px;  }  37.5% {    text-shadow: #f1a247 0 0 15px;  }  50% {    text-shadow: #f1ee47 0 0 5px;  }  50% {    text-shadow: #b347f1 0 0 5px;  }  62.5% {    text-shadow: #002afa 0 0 5px;  }  75% {    text-shadow: #ed709b 0 0 5px;  }  87.5% {    text-shadow: #39c5bb 0 0 5px;  }  100% {    text-shadow: #5636ed 0 0 5px;  }}]]></content>
       
     </entry>
     
