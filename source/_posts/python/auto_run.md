@@ -5,10 +5,9 @@ categories: python
 tags:
   - 模板
 ---
-
 ## Auto Run
-代码如下：
 
+代码如下：
 ```python
 import os
 import sys
@@ -64,7 +63,7 @@ def auto_run(switch:bool=True) -> None:
 
 ```
 
-### 库:
+## 库:
 ```powershell
 pip install pywin32
 ```

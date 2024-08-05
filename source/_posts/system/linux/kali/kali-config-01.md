@@ -7,13 +7,13 @@ tags:
   - linux
 ---
 ### 一、登录
+
 默认用户：kali
 默认密码：kali
-
 ### 二、调整分辨率
+
 Applications -> Settings -> Display
 设置完成后点击 Apply （应用）
-
 ### 三、换源
 ```shell
 # 更改/etc/apt/sources.list 文件
@@ -28,8 +28,8 @@ sudo apt update
 ```shell
 sudo dpkg-reconfigure locales
 ```
-使用方向键移动到 zh_CN.UTF-8 UTF-8 空格键选中 回车
-接着选中 zh_CN.UTF-8 回车确定
+使用方向键移动到`zh_CN.UTF-8 UTF-8`空格键选中 回车
+接着选中`zh_CN.UTF-8`回车确定
 重启即可生效
 
 2、安装中文输入法
@@ -39,4 +39,4 @@ sudo dpkg-reconfigure locales
 sudo apt install fcitx fcitx-pinyin
 ```
 将默认输入法改为 fcitx
-打开 fcitx 配置，将拼音输入法移至第一位，按Ctrl+Space切换输入法
+打开 fcitx 配置，将拼音输入法移至第一位，按`Ctrl+Space`切换输入法
