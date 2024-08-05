@@ -35,9 +35,10 @@ git config --global user.email email@email
 ssh-keygen -t rsa -C "email@email"
 ```
 *一路回车即可*  密钥被存储在 **~/.ssh/id_rsa.pub**
-打开[Github](https://github.com) Settings -> Access -> SSH and GPG keys -> New SSH key
+打开[Github](https://github.com)  Settings -> Access -> SSH and GPG keys -> New SSH key
 ![](img/note/navigation/git/git-01.png)
-##### 将密钥中的文本填入key中，点击Add SHH key
+
+将密钥中的文本填入key中，点击Add SHH key
 ![](img/note/navigation/git/git-02.png)
 ## 四、创建工作区
 
@@ -76,3 +77,6 @@ git push -u origin new_feature
 ```
 
 ## 五、常用命令
+**参照网站**
+* [Git 教程 | 菜鸟教程](https://www.runoob.com/git/git-tutorial.html)
+* [Git 使用教程-CSDN博客](https://blog.csdn.net/qq_16027093/article/details/130503317)
