@@ -8,7 +8,7 @@
       <link href="/blog//navigation/git/"/>
       <url>/blog//navigation/git/</url>
       
-        <content type="html"><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p> <em><strong>一款分布式版本控制系统软件</strong></em><br><strong>创始人就是我们伟大的Linux之父 林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds）</strong><br><strong><code>git 的出现高效的解决了团队开发中代码难同步的问题</code></strong></p><h2 id="二、下载"><a href="#二、下载" class="headerlink" title="二、下载"></a>二、下载</h2><p><strong>官网：<a href="https://git-scm.com/">Git</a></strong><br>安装完成后输入以下命令来检查</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><h2 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h2><h6 id="1、配置用户及邮箱信息"><a href="#1、配置用户及邮箱信息" class="headerlink" title="1、配置用户及邮箱信息"></a>1、配置用户及邮箱信息</h6><p><code>username: Github 用户名</code><br><code>email@email: Github 邮箱</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email email@email</span><br></pre></td></tr></table></figure><p>2、创建SSH密钥</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;email@email&quot;</span></span><br></pre></td></tr></table></figure><p><em>一路回车即可</em>  密钥被存储在 <strong>~&#x2F;.ssh&#x2F;id_rsa.pub</strong><br>打开<a href="https://github.com/">Github</a> Settings -&gt; Access -&gt; SSH and GPG keys -&gt; New SSH key<br><img src="/blog/img/note/navigation/git/git-01.png"></p><h5 id="将密钥中的文本填入key中，点击Add-SHH-key"><a href="#将密钥中的文本填入key中，点击Add-SHH-key" class="headerlink" title="将密钥中的文本填入key中，点击Add SHH key"></a>将密钥中的文本填入key中，点击Add SHH key</h5><p><img src="/blog/img/note/navigation/git/git-02.png"></p><h2 id="四、创建工作区"><a href="#四、创建工作区" class="headerlink" title="四、创建工作区"></a>四、创建工作区</h2><p>如果你创建了一个空仓库，想要把本地代码上传，使用一下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 绑定远程仓库</span></span><br><span class="line">git remote add origin repo_url</span><br><span class="line"><span class="comment"># 设置主分支</span></span><br><span class="line">git branch -M main</span><br><span class="line"><span class="comment"># 将文件加入缓存区</span></span><br><span class="line">git add filename</span><br><span class="line">git add . <span class="comment"># 添加所有更改的文件</span></span><br><span class="line"><span class="comment"># 提交代码至本地</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 推送至远程仓库</span></span><br><span class="line">git push -u origin main</span><br><span class="line"><span class="comment"># -u, --[no-]set-upstream -&gt; set upstream for git pull/status</span></span><br></pre></td></tr></table></figure><p>如果你正加入一个仓库，使用如下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆仓库</span></span><br><span class="line">git <span class="built_in">clone</span> repo_url</span><br><span class="line"><span class="comment"># 你可能想要切换至新的分支</span></span><br><span class="line">git checkout -b new_feature</span><br><span class="line"><span class="comment"># 将文件加入缓存区</span></span><br><span class="line">git add filename</span><br><span class="line">git add . <span class="comment"># 添加所有更改的文件</span></span><br><span class="line"><span class="comment"># 提交代码至本地</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 推送至远程仓库</span></span><br><span class="line">git push -u origin new_feature</span><br><span class="line"><span class="comment"># -u, --[no-]set-upstream -&gt; set upstream for git pull/status</span></span><br></pre></td></tr></table></figure><h2 id="五、常用命令"><a href="#五、常用命令" class="headerlink" title="五、常用命令"></a>五、常用命令</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p> <em><strong>一款分布式版本控制系统软件</strong></em><br><strong>创始人就是我们伟大的Linux之父 林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds）</strong><br><strong><code>git 的出现高效的解决了团队开发中代码难同步的问题</code></strong></p><h2 id="二、下载"><a href="#二、下载" class="headerlink" title="二、下载"></a>二、下载</h2><p><strong>官网：<a href="https://git-scm.com/">Git</a></strong><br>安装完成后输入以下命令来检查</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><h2 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h2><h6 id="1、配置用户及邮箱信息"><a href="#1、配置用户及邮箱信息" class="headerlink" title="1、配置用户及邮箱信息"></a>1、配置用户及邮箱信息</h6><p><code>username: Github 用户名</code><br><code>email@email: Github 邮箱</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email email@email</span><br></pre></td></tr></table></figure><p>2、创建SSH密钥</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;email@email&quot;</span></span><br></pre></td></tr></table></figure><p><em>一路回车即可</em>  密钥被存储在 <strong>~&#x2F;.ssh&#x2F;id_rsa.pub</strong><br>打开<a href="https://github.com/">Github</a>  Settings -&gt; Access -&gt; SSH and GPG keys -&gt; New SSH key<br><img src="/blog/img/note/navigation/git/git-01.png"></p><p>将密钥中的文本填入key中，点击Add SHH key<br><img src="/blog/img/note/navigation/git/git-02.png"></p><h2 id="四、创建工作区"><a href="#四、创建工作区" class="headerlink" title="四、创建工作区"></a>四、创建工作区</h2><p>如果你创建了一个空仓库，想要把本地代码上传，使用一下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="comment"># 绑定远程仓库</span></span><br><span class="line">git remote add origin repo_url</span><br><span class="line"><span class="comment"># 设置主分支</span></span><br><span class="line">git branch -M main</span><br><span class="line"><span class="comment"># 将文件加入缓存区</span></span><br><span class="line">git add filename</span><br><span class="line">git add . <span class="comment"># 添加所有更改的文件</span></span><br><span class="line"><span class="comment"># 提交代码至本地</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 推送至远程仓库</span></span><br><span class="line">git push -u origin main</span><br><span class="line"><span class="comment"># -u, --[no-]set-upstream -&gt; set upstream for git pull/status</span></span><br></pre></td></tr></table></figure><p>如果你正加入一个仓库，使用如下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆仓库</span></span><br><span class="line">git <span class="built_in">clone</span> repo_url</span><br><span class="line"><span class="comment"># 你可能想要切换至新的分支</span></span><br><span class="line">git checkout -b new_feature</span><br><span class="line"><span class="comment"># 将文件加入缓存区</span></span><br><span class="line">git add filename</span><br><span class="line">git add . <span class="comment"># 添加所有更改的文件</span></span><br><span class="line"><span class="comment"># 提交代码至本地</span></span><br><span class="line">git commit -m <span class="string">&quot;message&quot;</span></span><br><span class="line"><span class="comment"># 推送至远程仓库</span></span><br><span class="line">git push -u origin new_feature</span><br><span class="line"><span class="comment"># -u, --[no-]set-upstream -&gt; set upstream for git pull/status</span></span><br></pre></td></tr></table></figure><h2 id="五、常用命令"><a href="#五、常用命令" class="headerlink" title="五、常用命令"></a>五、常用命令</h2><p><strong>参照网站</strong></p><ul><li><a href="https://www.runoob.com/git/git-tutorial.html">Git 教程 | 菜鸟教程</a></li><li><a href="https://blog.csdn.net/qq_16027093/article/details/130503317">Git 使用教程-CSDN博客</a></li></ul>]]></content>
       
       
       <categories>
@@ -126,9 +126,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> 渗透 </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -153,9 +153,9 @@
       
         <tags>
             
-            <tag> 工具 </tag>
-            
             <tag> linux </tag>
+            
+            <tag> 工具 </tag>
             
         </tags>
       
@@ -180,11 +180,11 @@
       
         <tags>
             
-            <tag> 工具 </tag>
+            <tag> 渗透 </tag>
             
             <tag> linux </tag>
             
-            <tag> 渗透 </tag>
+            <tag> 工具 </tag>
             
         </tags>
       
@@ -257,17 +257,6 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/blog/categories/index.html"/>
-      <url>/blog/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/blog/css/custom.css"/>
       <url>/blog/css/custom.css</url>
@@ -282,6 +271,17 @@
       <title>标签</title>
       <link href="/blog/tags/index.html"/>
       <url>/blog/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/blog/categories/index.html"/>
+      <url>/blog/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
