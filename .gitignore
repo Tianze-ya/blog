@@ -1,4 +1,5 @@
 node_modules
-.deploy_git/
+.deploy_git
 db.json
+bat
 *.bat
