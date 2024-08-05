@@ -36,9 +36,9 @@ ssh-keygen -t rsa -C "email@email"
 ```
 *一路回车即可*  密钥被存储在 **~/.ssh/id_rsa.pub**
 打开[Github](https://github.com) Settings -> Access -> SSH and GPG keys -> New SSH key
-![](img/note/navigation/git-01.png)
+![](img/note/navigation/git/git-01.png)
 ##### 将密钥中的文本填入key中，点击Add SHH key
-![](img/note/navigation/git-02.png)
+![](img/note/navigation/git/git-02.png)
 ## 四、创建工作区
 
 如果你创建了一个空仓库，想要把本地代码上传，使用一下命令
@@ -64,7 +64,15 @@ git push -u origin main
 # 克隆仓库
 git clone repo_url
 # 你可能想要切换至新的分支
-git checkout -b new_feature 
+git checkout -b new_feature
+# 将文件加入缓存区
+git add filename
+git add . # 添加所有更改的文件
+# 提交代码至本地
+git commit -m "message"
+# 推送至远程仓库
+git push -u origin new_feature
+# -u, --[no-]set-upstream -> set upstream for git pull/status
 ```
 
-
+## 五、常用命令
