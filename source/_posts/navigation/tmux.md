@@ -1,12 +1,12 @@
 ---
 title: Tmux
 date: 2024-06-22
-categories: os
+categories: 导航
 tags:
   - 工具
   - linux
 ---
-# tmux
+# Tmux
 
 About tmux
 * 终端复用
