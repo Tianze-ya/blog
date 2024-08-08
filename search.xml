@@ -56,9 +56,9 @@
     
     
     <entry>
-      <title>获取移动终端CMCCAdmin</title>
-      <link href="/blog//network/superuser-cm/"/>
-      <url>/blog//network/superuser-cm/</url>
+      <title>获取中国移动CMCCAdmin账号密码</title>
+      <link href="/blog//network/CMCCAdmin-get/"/>
+      <url>/blog//network/CMCCAdmin-get/</url>
       
         <content type="html"><![CDATA[<h2 id="一、获取必要信息"><a href="#一、获取必要信息" class="headerlink" title="一、获取必要信息"></a>一、获取必要信息</h2><p><strong>查看光猫终端IP、用户名及密码</strong><br>默认：</p><ul><li>账号：user</li><li>密码：随机（此处用password代替）</li><li>IP：192.168.1.1</li></ul><h2 id="二、具体操作"><a href="#二、具体操作" class="headerlink" title="二、具体操作"></a>二、具体操作</h2><p>连接光猫的局域网<br>用浏览器打开（打开光猫的Telnet功能）<br><a href="http://192.168.1.1/usr=CMCCAdmin&psw=aDm8H%25MdA&cmd=1&telnet.gch">http://192.168.1.1/usr=CMCCAdmin&amp;psw=aDm8H%25MdA&amp;cmd=1&amp;telnet.gch</a><br>打开windows中Telnet功能<br>打开cmd 输入<br><code>telnet 192.168.1.1</code><br>login: <code>CMCCAdmin</code><br>password: <code>aDm8H%MdA</code><br>再输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sidbg 1 DB decry /userconfig/cfg/db_user_cfg.xml</span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">vi debug-decry-cfg</span><br><span class="line"><span class="comment"># 利用vi中的搜索功能</span></span><br><span class="line">/DevAuthInfo</span><br></pre></td></tr></table></figure><p>随后即可看到用户名及密码</p><p><em><strong>参考：<a href="https://www.bilibili.com/read/cv33997947/">一分钟时间教会如何轻松优雅地获取中国移动光猫超级管理员密码 </a></strong></em></p>]]></content>
       
@@ -109,7 +109,7 @@
       
       <categories>
           
-          <category> os </category>
+          <category> 系统 </category>
           
       </categories>
       
@@ -136,7 +136,7 @@
       
       <categories>
           
-          <category> os </category>
+          <category> 系统 </category>
           
       </categories>
       
@@ -163,7 +163,7 @@
       
       <categories>
           
-          <category> os </category>
+          <category> 系统 </category>
           
       </categories>
       
@@ -280,9 +280,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 框架 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -319,22 +319,22 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/blog/categories/index.html"/>
-      <url>/blog/categories/index.html</url>
+      <title>关于</title>
+      <link href="/blog/about/index.html"/>
+      <url>/blog/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>大家好，我是Tianze，是一名兴趣于计算机、互联网等领域的开发者。<br>本人于2021年开始学习相关内容，算是一名新手，希望通过自己的努力，能够成为一名优秀的开发者。<br>希望大家多多关注，多多支持。<br>本人在此致谢</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>关于</title>
-      <link href="/blog/about/index.html"/>
-      <url>/blog/about/index.html</url>
+      <title>分类</title>
+      <link href="/blog/categories/index.html"/>
+      <url>/blog/categories/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>大家好，我是Tianze，是一名兴趣于计算机、互联网等领域的开发者。<br>本人于2021年开始学习相关内容，算是一名新手，希望通过自己的努力，能够成为一名优秀的开发者。<br>希望大家多多关注，多多支持。<br>本人在此致谢</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
