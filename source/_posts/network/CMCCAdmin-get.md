@@ -1,5 +1,5 @@
 ---
-title: 获取移动终端CMCCAdmin
+title: 获取中国移动CMCCAdmin账号密码
 date: 2024-08-06
 categories: 网络
 tags:

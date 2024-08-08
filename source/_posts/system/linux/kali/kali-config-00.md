@@ -1,7 +1,7 @@
 ---
 title: 配置Kali-00
 date: 2024-08-04
-categories: os
+categories: 系统
 tags:
   - kali
   - linux
