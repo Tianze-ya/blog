@@ -1,9 +1,9 @@
 ---
 title: 开机自启
 date: 2023-4-12
-categories: python
+categories: 代码
 tags:
-  - 模板
+  - Python
 ---
 ## Auto Run
 

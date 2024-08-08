@@ -6,15 +6,15 @@ tags:
   - kali
   - linux
 ---
-### 一、登录
-
-默认用户：kali
-默认密码：kali
-### 二、调整分辨率
+## 一、登录
+*默认用户：`kali`
+默认密码：`kali`*
+## 二、调整分辨率
 
 Applications -> Settings -> Display
 设置完成后点击 Apply （应用）
-### 三、换源
+## 三、换源
+
 ```shell
 # 更改/etc/apt/sources.list 文件
 sudo sed -i "s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g" /etc/apt/sources.list
@@ -23,7 +23,7 @@ sudo apt update
 ```
 *此处更换清华源*
 
-### 四、汉化
+## 四、汉化
 1、设置中文
 ```shell
 sudo dpkg-reconfigure locales

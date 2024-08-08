@@ -1,13 +1,11 @@
 ---
-title: 安装Kali
+title: 配置Kali-00
 date: 2024-08-04
 categories: os
 tags:
   - kali
   - linux
 ---
-
-# Install Kali
 #### 一、 下载VMWare WorkStation
 [下载链接](https://www.123pan.com/s/fKdKjv-TkWj.html) 提取码:1234
 
