@@ -1,13 +1,12 @@
 ---
 title: Git 导航
 date: 2024-08-04
-categories: 导航
+categories: 软件
 tags:
   - 工具
 ---
 # Git
 ## 一、简介
-
  ***一款分布式版本控制系统软件***
 **创始人就是我们伟大的Linux之父 林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds）**
 **`Git 的出现高效的解决了团队开发中代码难同步的问题`**
@@ -36,10 +35,10 @@ ssh-keygen -t rsa -C "email@email"
 ```
 *一路回车即可*  密钥被存储在 **~/.ssh/id_rsa.pub**
 打开[Github](https://github.com)  Settings -> Access -> SSH and GPG keys -> New SSH key
-![](img/note/navigation/git/git-01.png)
+![](img/note/app/git/git-01.png)
 
 将密钥中的文本填入`key`中，点击`Add SHH key`
-![](img/note/navigation/git/git-02.png)
+![](img/note/app/git/git-02.png)
 ## 四、创建工作区
 
 如果你创建了一个空仓库，想要把本地代码上传，使用一下命令

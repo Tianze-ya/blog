@@ -1,7 +1,7 @@
 ---
 title: SSH
 date: 2024-08-07
-categories: 导航
+categories: 软件
 tags:
   - 工具
   - linux
@@ -31,7 +31,7 @@ DenyUsers wangwu
 ```bash
 ssh-keygen
 ```
-![](img/note/navigation/kali/ssh-keygen.png)
+![](img/note/system/linux/kali/ssh-keygen.png)
 把`~/.ssh/id_*`移到需要连接sshd的主机上
 把`~/.ssh/id_*.pub`移到被连接sshd的主机上并改名为`authorized_keys`
 ## 三、设置开机自启服务

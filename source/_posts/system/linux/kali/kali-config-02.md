@@ -6,6 +6,11 @@ tags:
   - kali
   - linux
 ---
+## 导航
+*1. [配置 Kali-00](https://tianze-ya.github.io/blog/system/linux/kali/kali-config-00/)*
+*2. [配置 Kali-01](https://tianze-ya.github.io/blog/system/linux/kali/kali-config-01/)*
+*3. [配置 Kali-02](https://tianze-ya.github.io/blog/system/linux/kali/kali-config-02/)                     <== 您在此处*
+
 ## 一、修改用户名和密码
 
 ```shell
@@ -27,7 +32,7 @@ sudo groupmod -n new_name kali
 # 更改主机名
 sudo hostnamectl set-hostname new_hostname && sudo vim /etc/hosts
 ```
-![](img/note/navigation/kali/hosts.png)
+![](img/note/system/linux/kali/hosts.png)
 
 ## 三、更改用户权限
 ```bash
