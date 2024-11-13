@@ -30,17 +30,17 @@ passwd new_name
 # 更改组名
 sudo groupmod -n new_name kali
 # 更改主机名
-sudo hostnamectl set-hostname new_hostname && sudo vim /etc/hosts
+sudo vim /etc/hosts
+sudo hostnamectl set-hostname new_hostname
 ```
 ![](img/note/system/linux/kali/hosts.png)
 
 ## 三、更改用户权限
 ```bash
-# 通过修改sudoers达到效果（visudo指令），可用格式如下
 # [用户名]    [被管理主机的IP]=([可以使用的身份])   [NOPASSWD: ][授权的命令]
 # %[组名]    [被管理主机的IP]=([可以使用的身份])   [NOPASSWD: ][授权的命令]
 # [被管理主机的IP]、[可以使用的身份]、[授权的命令] 都可以使用 ALL 来表示不限制
 # 示例（NOPASSWD 不需要输入密码）
-sudo visudo
-new_name    ALL=(ALL)   NOPASSWD:ALL
+sudo su
+echo "new_name    ALL=(ALL)   NOPASSWD:ALL" >> /etc/sudoers
 ```

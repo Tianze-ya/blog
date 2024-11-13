@@ -18,12 +18,13 @@ sudo apt install zsh
 chsh -s /bin/zsh
 ```
 
-# 主题
-### 安装on-my-zsh
+# 插件
+### 安装oh-my-zsh
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 ### 安装powerlevel10k
+*弃*
 ```bash
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
@@ -39,6 +40,12 @@ source ~/.zshrc
 ```bash
 p10k configure
 ```
+### 安装Starrship
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+安装完后再`~/.zshrc`的最后添加`eval "$(starship init zsh)"`即可
+配置文件在`~/.config/starship.toml`
 
 ## 插件
 ### zsh- autosuggestion
