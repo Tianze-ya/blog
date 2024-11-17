@@ -30,10 +30,11 @@ passwd new_name
 # 更改组名
 sudo groupmod -n new_name kali
 # 更改主机名
-sudo vim /etc/hosts
+sudo echo "127.0.0.1 new_hostname" >> /etc/hosts
 sudo hostnamectl set-hostname new_hostname
+# 删去旧主机名
+sudo vim /etc/hosts
 ```
-![](img/note/system/linux/kali/hosts.png)
 
 ## 三、更改用户权限
 ```bash

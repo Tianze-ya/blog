@@ -45,20 +45,3 @@ sudo apt install fcitx fcitx-pinyin
 ```
 将默认输入法改为 fcitx
 打开 fcitx 配置，将拼音输入法移至第一位，按`Ctrl+Space`切换输入法
-
-## 五、Hack Nerd Font
-下载Nerd Font
-```bash
-git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
-```
-执行安装程序
-```bash
-cd nerd-fonts
-chmod +x install.sh
-./install.sh
-```
-删除安装程序
-```bash
-cd ..
-rm -rf nerd-fonts
-```
