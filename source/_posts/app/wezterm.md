@@ -31,7 +31,11 @@ vim ~/.config/wezterm/wezterm.lua
 local wezterm = require("wezterm")
 local config = {
 	font_size = 15,
-	font = wezterm.font("Hack", { weight = "Regular" }),
+	font = wezterm.font{
+		family = "Maple Mono NF",
+		weight = "Regular",
+		harfbuzz_features = { "+cv01", "+cv04"},
+	},
 	color_scheme = "Catppuccin Mocha",
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
@@ -50,11 +54,84 @@ local config = {
 		bottom = 5,
 	},
 	keys = {
-	{
-	    key = 'n',
-	    mods = 'ALT',
-	    action = wezterm.action.ToggleFullScreen,
-	},
+		{
+		    key = 'n',
+		    mods = 'ALT',
+		    action = wezterm.action.ToggleFullScreen,
+		},
+		-- For Tmux
+		{
+		key = "1",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "1" })
+		}),
+		},
+		{
+		key = "2",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "2" })
+		}),
+		},
+		{
+		key = "3",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "3" })
+		}),
+		},
+		{
+		key = "4",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "4" })
+		}),
+		},
+		{
+		key = "5",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "5" })
+		}),
+		},
+		{
+		key = "6",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "6" })
+		}),
+		},
+		{
+		key = "7",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "7" })
+		}),
+		},
+		{
+		key = "8",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "8" })
+		}),
+		},
+		{
+		key = "9",
+		mods = "CTRL",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
+			wezterm.action.SendKey({ key = "9" })
+		}),
+		},
 	},
 }
 

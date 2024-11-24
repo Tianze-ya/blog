@@ -5,30 +5,29 @@ categories: 软件
 tags:
 ---
 ## 我正在使用的字体
-[Hack Nerd Font](https://www.programmingfonts.org/#hack)
-
-**Download for windows
-[Hack Windows Installer](https://github.com/source-foundry/Hack-windows-installer/releases/latest)
-
+[MapleMono-NF](https://github.com/subframe7536/maple-font)
 **Download for Linux
 ```zsh
 # 下载最新版本的字体文件
-wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+curl -OL https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF.zip
 # 解压
-unzip ./Hack-v3.003-ttf.zip
+unzip ./MapleMono-NF.zip -d ./ttf
 # 将字体文件复制到系统字体文件夹
-cp ./ttf/* /usr/share/fonts/
+sudo cp ./ttf/*.ttf /usr/share/fonts/
 # 或者复制到用户字体文件夹
-cp ./ttf/* ~/.local/share/forts/
+sudo cp ./ttf/*.ttf ~/.local/share/forts/
+# 删除无用文件
+rm -rf ./ttf
 # 使用以下命令清除并重新生成字体缓存和索引
 fc-cache -f -v
 # 查看安装情况
-fc-list | grep "Hack"
+fc-list | grep "Maple"
 ```
 
 ## 推荐的字体
-[JetBrainsMono Nerd Font](https://www.programmingfonts.org/#jetbrainsmono)
-[MesloLG Nerd Font](https://www.programmingfonts.org/#meslo)
+[JetBrainsMono Nerd Font](https://github.com/JetBrains/JetBrainsMono)
+[MesloLG](https://github.com/andreberg/Meslo-Font)
+[Hack Nerd Font](https://github.com/source-foundry/Hack)
 
 ## 更多
 [Nerd Fonts](https://www.nerdfonts.com/font-downloads)

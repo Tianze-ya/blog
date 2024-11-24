@@ -35,6 +35,8 @@ set -g @plugin 'jimeh/tmuxifier'
 set -g @plugin 'catppuccin/tmux'
 set -g @catppuccin_flavor 'mocha'
 
+run '~/.tmux/plugins/tpm/tpm'
+
 # non-plugin-options
 set -g default-terminal 'tmux-256color'
 set -g base-index 1
@@ -52,84 +54,7 @@ bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
 unbind C-b
 set -g prefix C-Space
 ```
-按下`prefix+Shift+i`
-在`~/.config/wezterm/wezterm.lua`中添加
-```lua
-keys = {
-	{
-	key = "1",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "1" })
-	}),
-	},
-	{
-	key = "2",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "2" })
-	}),
-	},
-	{
-	key = "3",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "3" })
-	}),
-	},
-	{
-	key = "4",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "4" })
-	}),
-	},
-	{
-	key = "5",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "5" })
-	}),
-	},
-	{
-	key = "6",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "6" })
-	}),
-	},
-	{
-	key = "7",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "7" })
-	}),
-	},
-	{
-	key = "8",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "8" })
-	}),
-	},
-	{
-	key = "9",
-	mods = "CTRL",
-	action = wezterm.action.Multiple({
-		wezterm.action.SendKey({ mods = "CTRL",key = " " }),
-		wezterm.action.SendKey({ key = "9" })
-	}),
-	},
-}
-```
+按下`prefix+Shift+i`来安装插件
 
 ### 三、其中的插件
 #### christoomey/vim-tmux-navigator
