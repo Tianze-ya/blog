@@ -45,3 +45,10 @@ sudo vim /etc/hosts
 sudo su
 echo "new_name    ALL=(ALL)   NOPASSWD:ALL" >> /etc/sudoers
 ```
+
+## 安装Homebrew
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo >> ~/.zshrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+```

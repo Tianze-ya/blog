@@ -16,9 +16,9 @@ sudo apt install kitty
 ```
 
 # 配置
+运行以下命令，已来更改主题
+通过/键搜索 推荐Catppuccin-Mocha
 ```zsh
-# 运行以下命令，已来更改主题
-# 通过/键搜索 推荐Catppuccin-Mocha
 kitty +kitten themes
 ```
 随后按下M键来修改配置主题

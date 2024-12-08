@@ -54,79 +54,68 @@ local config = {
 		bottom = 5,
 	},
 	keys = {
-		{
-		    key = 'n',
-		    mods = 'ALT',
-		    action = wezterm.action.ToggleFullScreen,
+		{ key = 'n', mods = 'ALT', 
+		action = wezterm.action.ToggleFullScreen,
 		},
 		-- For Tmux
 		{
-		key = "1",
-		mods = "CTRL",
+		key = "1", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "1" })
 		}),
 		},
 		{
-		key = "2",
-		mods = "CTRL",
+		key = "2", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "2" })
 		}),
 		},
 		{
-		key = "3",
-		mods = "CTRL",
+		key = "3", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "3" })
 		}),
 		},
 		{
-		key = "4",
-		mods = "CTRL",
+		key = "4", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "4" })
 		}),
 		},
 		{
-		key = "5",
-		mods = "CTRL",
+		key = "5", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "5" })
 		}),
 		},
 		{
-		key = "6",
-		mods = "CTRL",
+		key = "6", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "6" })
 		}),
 		},
 		{
-		key = "7",
-		mods = "CTRL",
+		key = "7", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "7" })
 		}),
 		},
 		{
-		key = "8",
-		mods = "CTRL",
+		key = "8", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "8" })
 		}),
 		},
 		{
-		key = "9",
-		mods = "CTRL",
+		key = "9", mods = "CTRL",
 		action = wezterm.action.Multiple({
 			wezterm.action.SendKey({ mods = "CTRL",key = " " }),
 			wezterm.action.SendKey({ key = "9" })
@@ -134,6 +123,11 @@ local config = {
 		},
 	},
 }
+
+wezterm.on('gui-startup', function(cmd)
+  local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
 
 return config
 ```
