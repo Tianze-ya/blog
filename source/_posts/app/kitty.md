@@ -11,14 +11,14 @@ kitty 是一款极好的终端模拟器
 * 美观
 
 # 安装
-```zsh
+```bash
 sudo apt install kitty
 ```
 
 # 配置
 运行以下命令，已来更改主题
 通过/键搜索 推荐Catppuccin-Mocha
-```zsh
+```bash
 kitty +kitten themes
 ```
 随后按下M键来修改配置主题

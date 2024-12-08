@@ -29,7 +29,7 @@ git config --global user.email "your_email@example.com"
 ```
 
 2、创建SSH密钥
-```zsh
+```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 *一路回车即可*  密钥被存储在 **~/.ssh/id_...**

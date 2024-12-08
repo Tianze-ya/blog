@@ -7,7 +7,7 @@ tags:
 ## 我正在使用的字体
 [MapleMono-NF](https://github.com/subframe7536/maple-font)
 **Download for Linux
-```zsh
+```bash
 # 下载最新版本的字体文件
 curl -OL https://github.com/subframe7536/maple-font/releases/latest/download/MapleMono-NF.zip
 # 解压

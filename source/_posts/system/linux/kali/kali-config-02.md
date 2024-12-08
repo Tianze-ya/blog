@@ -13,7 +13,7 @@ tags:
 
 ## 一、修改用户名和密码
 
-```shell
+```bash
 # 设置root用户密码，随后重启，登录root用户
 sudo passwd root
 # 更改用户名
@@ -47,7 +47,7 @@ echo "new_name    ALL=(ALL)   NOPASSWD:ALL" >> /etc/sudoers
 ```
 
 ## 安装Homebrew
-```zsh
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo >> ~/.zshrc
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc

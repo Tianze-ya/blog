@@ -20,7 +20,7 @@ Applications -> Settings -> Display
 设置完成后点击 Apply （应用）
 
 ## 三、换源
-```shell
+```bash
 # 更改/etc/apt/sources.list 文件
 sudo sed -i "s@http://http.kali.org/kali@https://mirrors.tuna.tsinghua.edu.cn/kali@g" /etc/apt/sources.list
 # 更新软件包
@@ -30,7 +30,7 @@ sudo apt update
 
 ## 四、汉化
 #### 1、设置中文
-```shell
+```bash
 sudo dpkg-reconfigure locales
 ```
 使用方向键移动到`zh_CN.UTF-8 UTF-8`空格键选中 回车
@@ -40,7 +40,7 @@ sudo dpkg-reconfigure locales
 #### 2、安装中文输入法
 *此处安装 fcitx 输入法*
 参考：*[Kali 设置中文输入法 ](https://blog.csdn.net/weixin_43550772/article/details/139817468)*
-```shell
+```bash
 sudo apt install fcitx fcitx-pinyin
 ```
 将默认输入法改为 fcitx

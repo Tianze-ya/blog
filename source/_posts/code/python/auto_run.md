@@ -64,7 +64,7 @@ def auto_run(switch:bool=True) -> None:
 ```
 
 ## 库:
-```powershell
+```bash
 pip install pywin32
 ```
 
