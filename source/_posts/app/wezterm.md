@@ -22,7 +22,7 @@ sudo apt install wezterm
 ```
 
 # 配置
-```zsh
+```bash
 mkdir ~/.config/wezterm
 vim ~/.config/wezterm/wezterm.lua
 ```

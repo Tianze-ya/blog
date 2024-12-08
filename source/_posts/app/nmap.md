@@ -14,7 +14,7 @@ tags:
 ### 主机查找
 
 **输入事例**
-```zsh
+```bash
 sudo nmap -sn 172.16.200.0/24
 ```
 ![](img/note/app/nmap/nmap-01.png)
@@ -25,7 +25,7 @@ sudo nmap -sn 172.16.200.0/24
 ### 端口扫描
 
 **输入事例**
-```zsh
+```bash
 sudo nmap --min-rate 10000 -p- 172.16.200.131
 ```
 ![](img/note/app/nmap/nmap-02.png)
@@ -35,7 +35,7 @@ sudo nmap --min-rate 10000 -p- 172.16.200.131
 ##### **二次扫描**
 
 **输入事例**
-```zsh
+```bash
 sudo nmap -sU --min-rate 10000 -p- 172.16.200.131
 ```
 ![](img/note/app/nmap/nmap-03.png)
@@ -45,7 +45,7 @@ sudo nmap -sU --min-rate 10000 -p- 172.16.200.131
 ### 获取信息
 
 **输入事例**
-```zsh
+```bash
 sudo nmap -sT -sV -O -p80,111,777,52497,5353,40444 172.16.200.131
 ```
 ![](img/note/app/nmap/nmap-04.png)
@@ -55,7 +55,7 @@ sudo nmap -sT -sV -O -p80,111,777,52497,5353,40444 172.16.200.131
 * -p 后接端口号 用 "," 隔开
 
 **输入事例**
-```zsh
+```bash
 sudo nmap --script=vuln -p80,111,777,52497,5353,40444 172.16.200.131
 ```
 * --script 指定扫描脚本

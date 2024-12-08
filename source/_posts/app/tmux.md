@@ -12,13 +12,13 @@ tags:
 
 # 安装
 
-```zsh
+```bash
 sudo apt install tmux
 ```
 
 # 配置
 ### 一、安装TPM
-```zsh
+```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 ### 二、配置文件

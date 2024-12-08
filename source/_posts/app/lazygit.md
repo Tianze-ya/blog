@@ -10,7 +10,7 @@ tags:
 高效的Git可视化管理
 
 # 下载
-```zsh
+```bash
 brew install lazygit
 ```
 
