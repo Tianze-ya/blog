@@ -1,5 +1,5 @@
 ---
-title: Vim
+title: Vim教程
 date: 2024-08-08
 categories: 软件
 tags:

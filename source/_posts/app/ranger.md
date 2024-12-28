@@ -92,3 +92,4 @@ sudo apt install lynx elinks
 * `hjkl`同vim可切换目录
 * `cw`重命名
 * `zh`显示隐藏文件
+* `Shift+s`切换到当前目录并退出
