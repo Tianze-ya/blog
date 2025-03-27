@@ -28,6 +28,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 ```
+
 下载
 ```bash
 ya pack -a KKV9/compress
