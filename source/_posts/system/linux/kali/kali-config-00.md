@@ -13,6 +13,9 @@ tags:
 
 ## 一、 下载VMWare WorkStation
 [下载链接](https://www.123pan.com/s/fKdKjv-TkWj.html) 提取码:1234
+或者访问寻求帮助
+[CSDN](https://blog.csdn.net/Sky_WANGJ/article/details/139239524)
+[我的B站教程](https://www.bilibili.com/video/BV1iHcneVEh6/)
 
 ## 二、 下载kali
 [Get Kali | Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines)

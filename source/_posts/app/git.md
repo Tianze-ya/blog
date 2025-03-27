@@ -22,7 +22,7 @@ git --version
 
 1、配置用户及邮箱信息
 `username: Github 用户名`
-`email@email: Github 邮箱`
+`your_email@example.com: Github 邮箱`
 ```bash
 git config --global user.name "username"
 git config --global user.email "your_email@example.com"

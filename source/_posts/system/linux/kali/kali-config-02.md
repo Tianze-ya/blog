@@ -30,10 +30,10 @@ passwd new_name
 # 更改组名
 sudo groupmod -n new_name kali
 # 更改主机名
-sudo echo "127.0.0.1 new_hostname" >> /etc/hosts
+sudo sed -i "a\127.0.0.1 new_hostname" /etc/hosts
 sudo hostnamectl set-hostname new_hostname
 # 删去旧主机名
-sudo vim /etc/hosts
+sudo sed -i "2d" /etc/hosts
 ```
 
 ## 三、更改用户权限
@@ -42,13 +42,12 @@ sudo vim /etc/hosts
 # %[组名]    [被管理主机的IP]=([可以使用的身份])   [NOPASSWD: ][授权的命令]
 # [被管理主机的IP]、[可以使用的身份]、[授权的命令] 都可以使用 ALL 来表示不限制
 # 示例（NOPASSWD 不需要输入密码）
-sudo su
-echo "new_name    ALL=(ALL)   NOPASSWD:ALL" >> /etc/sudoers
+sudo sed -i "a\new_name    ALL=(ALL)   NOPASSWD:ALL" /etc/sudoers
 ```
 
-## 安装Homebrew
+**一键脚本**
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo >> ~/.zshrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+git clone https://gitee.com/Tianze-ya/kali-init.git
+cd kali-init ; chmod +x ./init.sh ./config.sh
+sudo ./init.sh ; ./config.sh
 ```

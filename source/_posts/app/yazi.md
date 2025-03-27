@@ -17,7 +17,7 @@ brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick
 ```
 
 # 插件和配置
-将此放到您的zshrc中
+将此代码放到您的zshrc中
 ```bash
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

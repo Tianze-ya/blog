@@ -28,12 +28,13 @@ AllowUsers zhangsan lisi@61.23.24.25 	# 多个用户以空格分隔
 DenyUsers wangwu
 ```
 ## 生成密钥对
+若禁用公钥登录并启用密码登录，则可以省去这一步
 ```bash
-ssh-keygen
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 ![](img/note/system/linux/kali/ssh-keygen.png)
-把`~/.ssh/id_*`移到需要连接sshd的主机上
-把`~/.ssh/id_*.pub`移到被连接sshd的主机上并改名为`authorized_keys`
+把`~/.ssh/id_rsa`移到需要连接sshd的主机上
+把`~/.ssh/id_rsa.pub`移到被连接sshd的主机上并改名为`authorized_keys`
 ## 三、设置开机自启服务
 ```bash
 # 设置开机自启动

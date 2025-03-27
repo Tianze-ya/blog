@@ -69,3 +69,4 @@ pip install pywin32
 ```
 
 * 仅支持windows系统，需要管理员权限
+[讲解](https://www.bilibili.com/video/BV1Pz4y1c7Mx/)
