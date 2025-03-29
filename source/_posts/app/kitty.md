@@ -12,8 +12,10 @@ kitty 是一款极好的终端模拟器
 
 # 安装
 ```bash
-sudo apt install kitty
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
 ```
+随后自行添加桌面环境
 
 # 配置
 运行以下命令，已来更改主题

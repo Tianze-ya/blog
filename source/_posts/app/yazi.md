@@ -17,7 +17,7 @@ brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick
 ```
 
 # 插件和配置
-将此代码放到您的zshrc中
+将此代码放到您的zshrc/bashrc中
 ```bash
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -38,4 +38,10 @@ ya pack -a llanosrocas/yaziline
 ya pack -a yazi-rs/flavors:catppuccin-mocha
 ya pack -a yazi-rs/plugins:full-border
 ya pack -a yazi-rs/plugins:max-preview
+```
+
+```bash
+git clone https://github.com/Tianze-ya/yazi.git
+rm -rf ./yazi/.git
+cp -r ./yazi ~/.config/
 ```

@@ -10,17 +10,19 @@ tags: []
 官网： https://wezfurlong.org/wezterm/
 
 # 安装
-更新源
 ```bash
-curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
-echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
-sudo apt update
+brew tap wezterm/wezterm-linuxbrew
+brew install wezterm
 ```
-下载
+随后自行添加桌面环境
+
+或者
 ```bash
+curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /etc/apt/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/etc/apt/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+sudo apt update
 sudo apt install wezterm
 ```
-
 # 配置
 ```bash
 mkdir ~/.config/wezterm
@@ -30,7 +32,7 @@ vim ~/.config/wezterm/wezterm.lua
 ```lua
 local wezterm = require("wezterm")
 local config = {
-	font_size = 15,
+	font_size = 20,
 	font = wezterm.font{
 		family = "Maple Mono NF",
 		weight = "Regular",
