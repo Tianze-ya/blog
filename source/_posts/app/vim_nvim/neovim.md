@@ -14,9 +14,4 @@ brew install neovim
 ```
 
 # 配置
-需要下载一些东西
-```bash
-brew install lua-language-server
-brew install ripgrep
-```
-[我的配置](https://github.com/Tianze-ya/nvim)
+

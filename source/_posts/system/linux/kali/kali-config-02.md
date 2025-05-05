@@ -44,10 +44,3 @@ sudo sed -i "2d" /etc/hosts
 # 示例（NOPASSWD 不需要输入密码）
 sudo sed -i "a\new_name    ALL=(ALL)   NOPASSWD:ALL" /etc/sudoers
 ```
-
-**一键脚本**
-```bash
-git clone https://gitee.com/Tianze-ya/kali-init.git
-cd kali-init ; chmod +x ./init.sh ./config.sh
-sudo ./init.sh ; ./config.sh
-```

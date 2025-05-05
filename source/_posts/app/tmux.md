@@ -13,7 +13,7 @@ tags:
 # 安装
 
 ```bash
-sudo apt install tmux
+brew install tmux
 ```
 
 # 配置

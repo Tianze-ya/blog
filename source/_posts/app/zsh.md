@@ -11,7 +11,7 @@ tags:
 # 安装
 安装zsh
 ```bash
-sudo apt install zsh
+brew install zsh
 ```
 设置为默认shell
 ```bash

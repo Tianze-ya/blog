@@ -13,7 +13,7 @@ cover:
 
 # 下载
 ```bash
-sudo apt install fzf
+brew install fzf
 ```
 
 # 配置
