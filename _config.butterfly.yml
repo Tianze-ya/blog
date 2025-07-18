@@ -41,7 +41,7 @@ social:
 # Favicon（網站圖標）
 favicon: /img/favicona.png
 
-# Avatar (頭像)
+# Avatar (头像)
 avatar:
   img: /img/avatar.jpg
   effect: false
