@@ -4,6 +4,7 @@ date: 2024-08-15
 categories: 软件
 tags:
   - linux
+cover: img/cover/neovim.png
 ---
 # 简介
 基于Vim所写的一款功能更强大的编辑器

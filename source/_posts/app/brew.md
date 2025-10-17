@@ -4,7 +4,7 @@ date: 2025-03-16
 categories: 软件
 tags:
   - linux
-cover:
+cover: img/cover/brew.jpg
 ---
 # 简介
 一款Like-Unix的通用包管理器

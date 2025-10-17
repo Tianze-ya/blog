@@ -7,8 +7,7 @@ tags:
 cover:
 ---
 # 简介
-由于neofetch的停止更新，我们不得不寻找一些替代品
-比如 FastFetch 是neofetch的一个分支
+由于neofetch的停止更新，我们不得不寻找一些替代品，FastFetch 就是极好的替代品
 
 # 下载
 ```bash

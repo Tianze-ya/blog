@@ -3,8 +3,12 @@ title: 加速器无法访问Github
 date: 2024-12-01
 categories: 网络
 tags:
+cover:
 ---
-一键脚本
+# 简介
+解决加速器无法访问Github
+
+# 一键脚本
 ```bash
 echo "nameserver 114.114.114.114" | sudo tee -a /etc/resolv.conf
 

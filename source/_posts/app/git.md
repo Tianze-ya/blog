@@ -4,6 +4,7 @@ date: 2024-08-04
 categories: 软件
 tags:
   - 工具
+cover:
 ---
 # 一、简介
  ***一款分布式版本控制系统软件***
@@ -78,5 +79,5 @@ git push -u origin new_feature
 # 五、常用命令
 
 **参照网站**
-* [Git 教程 | 菜鸟教程](https://www.runoob.com/git/git-tutorial.html)
-* [Git 使用教程-CSDN博客](https://blog.csdn.net/qq_16027093/article/details/130503317)
+- [Git 教程 | 菜鸟教程](https://www.runoob.com/git/git-tutorial.html)
+- [Git 使用教程-CSDN博客](https://blog.csdn.net/qq_16027093/article/details/130503317)

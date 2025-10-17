@@ -5,10 +5,11 @@ categories: 软件
 tags:
   - 工具
   - linux
+cover:
 ---
 # 简介
-* 终端复用
-* 多任务管理
+- 终端复用
+- 多任务管理
 
 # 安装
 
@@ -66,7 +67,7 @@ set -g prefix C-Space
 
 # 常用快捷键
 ***完整快捷键查询 [Tmux Cheat Sheet](https://tmuxcheatsheet.com/)***
-* Prefix - `Crrl+Space`
-* ChangeWindow - `Ctrl+1/2/3...`
-* EnterSelection - `Ctrl+[`
-* SelectPane - `Ctrl+h/j/k/l`
+- Prefix - `Crrl+Space`
+- ChangeWindow - `Ctrl+1/2/3...`
+- EnterSelection - `Ctrl+[`
+- SelectPane - `Ctrl+h/j/k/l`

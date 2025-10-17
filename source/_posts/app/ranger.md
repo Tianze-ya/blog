@@ -5,6 +5,7 @@ categories: 软件
 tags:
   - linux
   - 工具
+cover:
 ---
 # 简介
 一款在终端中的文件管理器
@@ -62,12 +63,12 @@ sudo apt install highlight
 ```
 
 ### 查看压缩文件
- ```bash
+```bash
 sudo apt install atool
 ```
 
 ### 预览HTML文件
- ```bash
+```bash
 sudo apt install lynx elinks
 ```
 
@@ -86,10 +87,10 @@ sudo apt install lynx elinks
 将`${VISUAL :-$EDITOR}`全部修改成自己的编辑器 如vim nvim code
 
 # 快捷键
-* `q`键退出
-* `Enter`打开文件
-* `:`进入命令模式
-* `hjkl`同vim可切换目录
-* `cw`重命名
-* `zh`显示隐藏文件
-* `Shift+s`切换到当前目录并退出
+- `q`键退出
+- `Enter`打开文件
+- `:`进入命令模式
+- `hjkl`同vim可切换目录
+- `cw`重命名
+- `zh`显示隐藏文件
+- `Shift+s`切换到当前目录并退出

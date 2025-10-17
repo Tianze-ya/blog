@@ -4,8 +4,12 @@ date: 2023-4-12
 categories: 代码
 tags:
   - Python
+cover:
 ---
-## Auto Run
+# 简介
+开机自启
+
+# Auto Run
 
 代码如下：
 ```python
@@ -63,10 +67,10 @@ def auto_run(switch:bool=True) -> None:
 
 ```
 
-## 库:
+# 库:
 ```bash
 pip install pywin32
 ```
 
-* 仅支持windows系统，需要管理员权限
+*仅支持windows系统，需要管理员权限*
 [讲解](https://www.bilibili.com/video/BV1Pz4y1c7Mx/)

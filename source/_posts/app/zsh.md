@@ -4,6 +4,7 @@ date: 2024-08-11
 categories: 软件
 tags:
   - linux
+cover:
 ---
 # 简介
 一款扩展性强的shell

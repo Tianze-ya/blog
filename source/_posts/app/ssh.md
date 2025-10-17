@@ -5,7 +5,13 @@ categories: 软件
 tags:
   - 工具
   - linux
+cover:
 ---
+# 简介
+是一种用于**安全地**访问远程计算机的网络协议
+
+# 使用
+
 ## 一、修改ssh_d的配置文件
 ```bash
 sudo vim /etc/ssh/sshd_config
@@ -27,7 +33,7 @@ AllowUsers zhangsan lisi@61.23.24.25 	# 多个用户以空格分隔
 # 禁止某些用户登录(wangwu)，用法于AllowUsers 类似（注意不要同时使用）
 DenyUsers wangwu
 ```
-## 生成密钥对
+## 二、生成密钥对
 若禁用公钥登录并启用密码登录，则可以省去这一步
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"

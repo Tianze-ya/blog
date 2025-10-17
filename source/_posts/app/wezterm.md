@@ -2,7 +2,8 @@
 title: Wezterm
 date: 2024-08-11
 categories: 软件
-tags: []
+tags:
+cover:
 ---
 # 简介
 一款由Rust编写的Terminal
@@ -135,4 +136,4 @@ return config
 ```
 
 # 快捷键
-* FullScreen - `Alt+n`
+- FullScreen - `Alt+n`
