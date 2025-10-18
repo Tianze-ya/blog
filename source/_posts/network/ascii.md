@@ -2,8 +2,8 @@
 title: ASCII码
 date: 2025-07-21
 categories: 网络
-tags: 
-cover:
+tags:
+cover: img/note/network/ascii.png
 ---
 # 简介
 ASCII表

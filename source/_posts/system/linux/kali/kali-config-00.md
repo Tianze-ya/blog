@@ -5,6 +5,7 @@ categories: 系统
 tags:
   - kali
   - linux
+cover: img/cover/kali.jpg
 ---
 # 简介
 配置Kali-00
